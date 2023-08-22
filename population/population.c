@@ -24,6 +24,6 @@ int main(void)
     }
 
     // TODO: Print number of years
-    printf("Number of years is: %i/n", numberYears);
+    printf("Number of years is: %i\n", numberYears);
 
 }
