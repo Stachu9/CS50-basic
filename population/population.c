@@ -4,16 +4,18 @@
 int main(void)
 {
     // TODO: Prompt for start size
+    int startSize;
     do
     {
-        int startSize = get_int("Tell start size: ");
+        startSize = get_int("Tell start size: ");
     }
     while (startSize < 9);
 
     // TODO: Prompt for end size
+    int endSize;
     do
     {
-        int endSize = get_int("Tell end size: ");
+        endSize = get_int("Tell end size: ");
     }
     while (endSize < startSize);
 
