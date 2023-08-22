@@ -20,7 +20,7 @@ int main(void)
     {
         tempNumber += int(tempNumber/3);
         tempNumber -= int(tempNumber/4);
-        numberYears += 1;
+        numberYears ++;
     }
 
     // TODO: Print number of years
