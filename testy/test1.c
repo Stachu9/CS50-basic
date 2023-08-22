@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char x = "a";
+    char[2] x = "a";
     char y = "b";
     string z = "";
 
