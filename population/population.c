@@ -27,8 +27,7 @@ int main(void)
 
     while (tempNumber < endSize)
     {
-        tempNumber += tempNumber/3;
-        tempNumber -= tempNumber/4;
+        tempNumber += tempNumber/3 - tempNumber/4;
         numberYears ++;
         printf("%i\n", tempNumber);
     }
