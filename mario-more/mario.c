@@ -12,6 +12,7 @@ int main(void)
 
   for(int i = 0; i > x; i++)
   {
+    for(int j = 0; j < x)
     printf("%s %s %s\n");
     block1 = block1 + " ";
     block2 = block2 + "#";
