@@ -3,16 +3,17 @@
 
 int main(void)
 {
+    int x;
   do
   {
-    int hieght = get_int("Tell hieght: ");
+    x = get_int("Tell hieght: ");
   }
-  while (hieght < 1 || hieght > 8);
+  while (x < 1 || x > 8);
 
   string block1 = "";
   string block2 = "#";
 
-  for(int i = 0; i > hieght; i++)
+  for(int i = 0; i > x; i++)
   {
     printf("%s %s %s\n", block1, block2, block1);
     block1 += " ";
