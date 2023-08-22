@@ -2,6 +2,6 @@
 
 int main(void)
 {
-
-    printf("hello, Stan\n");
+    str name = het_string("Tell name: ");
+    printf("hello, %s\n", name);
 }
