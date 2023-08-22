@@ -29,6 +29,7 @@ int main(void)
     {
         tempNumber += tempNumber/12;
         numberYears ++;
+        printf("%i\n", tempNumber);
     }
 
     // TODO: Print number of years
