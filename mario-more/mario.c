@@ -16,7 +16,7 @@ int main(void)
   for(int i = 0; i > x; i++)
   {
     printf("%s %s %s\n", block1, block2, block1);
-    block1 += " ";
-    block2 += "#";
+    block1 = block1 + " ";
+    block2 = block2 + "#";
   }
 }
