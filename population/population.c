@@ -16,7 +16,7 @@ int main(void)
     int numberYears = 0;
     int tempNumber = startSize;
 
-    while (tempNumber < endSize);
+    while (tempNumber < endSize)
     {
         tempNumber += tempNumber/3;
         tempNumber -= tempNumber/4;
