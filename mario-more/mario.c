@@ -10,18 +10,18 @@ int main(void)
   }
   while (x < 1 || x > 8);
 
-  for(int i = 0; i > x; i++;)
+  for(int i = 0; i > x; i++)
   {
-    for(int j = 1; j < x; j++;)
+    for(int j = 1; j < x; j++)
     {
         printf(" ");
     }
-    for (int z = 0; z < x; z++;)
+    for (int z = 0; z < x; z++)
     {
         printf("#");
     }
     printf("  ");
-    for (int z = 0; z < x; z++;)
+    for (int z = 0; z < x; z++)
     {
         printf("#");
     }
