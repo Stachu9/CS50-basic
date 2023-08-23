@@ -17,6 +17,8 @@ int main(void)
             ++count;
         }while (numberDigs != 0);
 
+    printf("%i\n", count);
+
     int sumOnce = 0;
     int sumTwice = 0;
     int flag = 1;
