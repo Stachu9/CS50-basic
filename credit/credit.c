@@ -16,5 +16,8 @@ int main(void)
             ++count;
         }while (numberDigs != 0);
 
-        for(int i = 0; i < numberDigs)
+        for(int i = 0; i < numberDigs; i += 2)
+        {
+            
+        }
 }
