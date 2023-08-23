@@ -106,6 +106,9 @@ int main(void)
 
                 }
 
+                int tempReplaced1;
+                int tempReplaced2;
+                long lastNumsCopy = last2Nums;
                 
 
                 if(count == 15 && (last2Nums == 34 || last2Nums == 37))
