@@ -55,6 +55,8 @@ int main(void)
             ++countTwice;
         }while(tempTwice != 0);
 
+        printf("countTwice = %i\n", countTwice);
+
     long tempTwice2 = sumTwice;
     int finSumTwice = 0;
     int temp2;
