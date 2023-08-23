@@ -10,7 +10,7 @@ int main(void)
   }
   while (x < 1 || x > 8);
 
-  for(int i = 0; i > x; i++)
+  for(int i = 0; i < x; i++)
   {
     for(int j = 1; j < x; j++)
     {
@@ -25,6 +25,8 @@ int main(void)
     {
         printf("#");
     }
+
+    printf("\n");
 
   }
 }
