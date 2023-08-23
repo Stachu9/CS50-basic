@@ -32,8 +32,6 @@ int main(void)
             printf("Temp: %i = %li  %i\n", temp, tempCardNum, multi);
             tempCardNum = tempCardNum / 10;
 
-
-
             if (flag == 1)
             {
                 sumOnce = sumOnce + temp;
@@ -45,6 +43,15 @@ int main(void)
                 sumTwice = sumTwice * 10;
                 flag = 1;
             }
+
+    int countTwice = 0;
+    long tempTwice = sumTwice;
+        do
+        {
+            tempTwice = tempTwice / 10;
+            ++countTwice;
+        }while(tempTwice != 0);
+        
 
         }
     printf("%li\n %i\n", sumTwice, sumOnce);
