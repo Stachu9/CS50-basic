@@ -105,9 +105,13 @@ int main(void)
                 {
                     printf("AMEX\n");
                 }
-                if(count == 16 && (last2Nums == 51 || last2Nums == 52 || last2Nums == 53 || last2Nums == 54 || last2Nums == 55))
+                else if(count == 16 && (last2Nums == 51 || last2Nums == 52 || last2Nums == 53 || last2Nums == 54 || last2Nums == 55))
                 {
                     printf("MASTERCARD\n");
+                }
+                else
+                {
+                    printf("INVALID\n");
                 }
             }
         }
