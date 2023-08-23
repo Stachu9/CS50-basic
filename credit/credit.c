@@ -68,5 +68,12 @@ int main(void)
             finSumTwice = finSumTwice + temp2;
         }
 
+    int check = finSumTwice + sumOnce;
+
+        if(check % 10 == 0)
+        {
+            
+        }
+
     printf("%i\n %i\n", finSumTwice, sumOnce);
 }
