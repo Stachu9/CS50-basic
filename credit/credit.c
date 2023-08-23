@@ -72,7 +72,11 @@ int main(void)
 
         if(check % 10 == 0)
         {
-            
+
+        }
+        else
+        {
+            printf("INVALID")
         }
 
     printf("%i\n %i\n", finSumTwice, sumOnce);
