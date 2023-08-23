@@ -16,7 +16,11 @@ int main(void)
             ++count;
         }while (numberDigs != 0);
 
-        for(int i = 0; i < numberDigs; i += 2)
+    int sumOnce = 0;
+    int sumTwice = 0;
+    int flag = 1;
+
+        for(int i = 0; i < numberDigs; i ++)
         {
             
         }
