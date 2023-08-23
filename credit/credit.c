@@ -81,6 +81,9 @@ int main(void)
                 tempCardNum2 = tempCardNum2 / 10;
 
                 if (i > (count - 3))
+                {
+                    
+                }
 
             }
 
