@@ -11,12 +11,14 @@ int main(void)
   while (x < 1 || x > 8);
 
   int t = 1;
+  int b = x;
 
   for(int i = 0; i < x; i++)
   {
     for(int j = 1; j < x; j++)
     {
         printf(" ");
+        b--;
     }
     for (int z = 0; z < t; z++)
     {
