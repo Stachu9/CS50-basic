@@ -86,7 +86,7 @@ int main(void)
                 {
                     printf("enter tempcardnum = %li\n", tempCardNum2);
                     last2Nums = last2Nums * 10;
-                    last2Nums = last2Nums + (tempCardNum2 % 2);
+                    last2Nums = last2Nums + (tempCardNum2 % 10);
                 }
 
                 printf("lastnums = %li\n", last2Nums);
