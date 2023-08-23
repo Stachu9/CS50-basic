@@ -106,10 +106,14 @@ int main(void)
 
                 }
 
-                int tempReplaced1;
-                int tempReplaced2;
                 long lastNumsCopy = last2Nums;
-                
+                int tempReplaced1 = lastNumsCopy % 10;
+                lastNumsCopy = lastNumsCopy / 10;
+                int tempReplaced2 = lastNumsCopy % 10;
+
+
+
+
 
                 if(count == 15 && (last2Nums == 34 || last2Nums == 37))
                 {
