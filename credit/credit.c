@@ -74,7 +74,7 @@ int main(void)
         if(check % 10 == 0)
         {
             long tempCardNum2 = cardNum;
-            int last2Nums;
+            int last2Nums = 0;
 
             for(int i = 0; i < count; i ++)
             {
@@ -82,7 +82,8 @@ int main(void)
 
                 if (i > (count - 3))
                 {
-
+                    last2Nums = last2Nums * 10;
+                    last2Nums = last2Nums + (tempCardNum2 % 2);
                 }
 
             }
