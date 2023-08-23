@@ -86,6 +86,8 @@ int main(void)
                     last2Nums = last2Nums + (tempCardNum2 % 2);
                 }
 
+                printf("lastnums = %i\n", last2Nums);
+
             }
 
             if(temp == 4 && (count == 13 || count == 16))
