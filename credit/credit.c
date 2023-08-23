@@ -41,7 +41,7 @@ int main(void)
             }
             else
             {
-                sumTwice = sumTwice + temp;
+                sumTwice = sumTwice + (temp * 2);
                 flag = 1;
             }
 
