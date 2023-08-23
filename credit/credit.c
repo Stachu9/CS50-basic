@@ -24,12 +24,12 @@ int main(void)
     int flag = 1;
     int multi = 10;
     int temp;
-    int tempCardNum = cardNum;
+    long tempCardNum = cardNum;
 
         for(int i = 0; i < count; i ++)
         {
             temp = tempCardNum % multi;
-            printf("Temp: %i = %i  %i\n", temp, tempCardNum, multi);
+            printf("Temp: %i = %li  %i\n", temp, tempCardNum, multi);
             tempCardNum = tempCardNum / 10;
 
 
