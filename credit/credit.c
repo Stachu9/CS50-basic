@@ -84,6 +84,7 @@ int main(void)
 
                 if (i > (count - 3))
                 {
+                    printf("enter");
                     last2Nums = last2Nums * 10;
                     last2Nums = last2Nums + (tempCardNum2 % 2);
                 }
