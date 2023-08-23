@@ -106,6 +106,8 @@ int main(void)
 
                 }
 
+                
+
                 if(count == 15 && (last2Nums == 34 || last2Nums == 37))
                 {
                     printf("AMEX\n");
