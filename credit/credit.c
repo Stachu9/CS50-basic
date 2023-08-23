@@ -26,6 +26,17 @@ int main(void)
         {
             temp = cardNum % multi;
             multi = multi * 10;
-            
+
+            if (flag == 1)
+            {
+                sumOnce = sumOnce + temp;
+                flag = 0;
+            }
+            else
+            {
+                sumTwice = sumTwice + temp;
+                flag = 1;
+            }
+
         }
 }
