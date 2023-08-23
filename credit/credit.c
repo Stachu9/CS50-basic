@@ -107,9 +107,9 @@ int main(void)
                 }
 
                 long lastNumsCopy = last2Nums;
-                int tempReplaced1 = lastNumsCopy % 10;
+                long tempReplaced1 = lastNumsCopy % 10;
                 lastNumsCopy = lastNumsCopy / 10;
-                int tempReplaced2 = lastNumsCopy % 10;
+                long tempReplaced2 = lastNumsCopy % 10;
 
 
 
