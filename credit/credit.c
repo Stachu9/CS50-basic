@@ -43,6 +43,7 @@ int main(void)
                 sumTwice = sumTwice * 10;
                 flag = 1;
             }
+        }
 
     int countTwice = 0;
     long tempTwice = sumTwice;
@@ -51,8 +52,17 @@ int main(void)
             tempTwice = tempTwice / 10;
             ++countTwice;
         }while(tempTwice != 0);
-        
 
+    long tempTwice2 = sumTwice;
+    int finSumTwice = 0;
+    int temp2;
+
+        for(int j = 0; j < countTwice; j++)
+        {
+            temp2 = tempTwice2 % multi;
+            tempTwice2 = tempTwice2 / 10;
+            finSumTwice = finSumTwice + temp;
         }
-    printf("%li\n %i\n", sumTwice, sumOnce);
+
+    printf("%i\n %i\n", finSumTwice, sumOnce);
 }
