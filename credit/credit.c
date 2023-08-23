@@ -30,6 +30,8 @@ int main(void)
             temp = cardNum % multi;
             multi = multi * 10;
 
+            printf("Temp: %i\n", temp);
+
             if (flag == 1)
             {
                 sumOnce = sumOnce + temp;
