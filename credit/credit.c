@@ -19,9 +19,13 @@ int main(void)
     int sumOnce = 0;
     int sumTwice = 0;
     int flag = 1;
+    int multi = 10;
+    int temp;
 
         for(int i = 0; i < numberDigs; i ++)
         {
+            temp = cardNum % multi;
+            multi = multi * 10;
             
         }
 }
