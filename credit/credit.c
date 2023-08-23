@@ -17,8 +17,6 @@ int main(void)
             ++count;
         }while (numberDigs != 0);
 
-    printf("%i\n", count);
-
     int sumOnce = 0;
     long sumTwice = 0;
     int flag = 1;
@@ -29,7 +27,6 @@ int main(void)
         for(int i = 0; i < count; i ++)
         {
             temp = tempCardNum % multi;
-            printf("Temp: %i = %li  %i\n", temp, tempCardNum, multi);
             tempCardNum = tempCardNum / 10;
 
             if (flag == 1)
@@ -45,17 +42,14 @@ int main(void)
             }
         }
 
-        printf("Sumtwice = %li\n", sumTwice);
-
     int countTwice = 0;
     long tempTwice = sumTwice;
+
         do
         {
             tempTwice = tempTwice / 10;
             ++countTwice;
         }while(tempTwice != 0);
-
-        printf("countTwice = %i\n", countTwice);
 
     long tempTwice2 = sumTwice;
     int finSumTwice = 0;
@@ -88,21 +82,13 @@ int main(void)
                 for(int i = 0; i < count; i ++)
                 {
                     tempDivided = tempCardNum2 % 10;
-
-                    printf("%li\n", tempCardNum2);
-                    printf("%li\n", tempDivided);
-
                     tempCardNum2 = tempCardNum2 / 10;
-
-
 
                     if (i > (count - 3))
                     {
                         lastNums = lastNums * 10;
                         lastNums = lastNums + tempDivided;
                     }
-
-                printf("lastnums = %li\n", lastNums);
 
                 }
 
@@ -112,12 +98,6 @@ int main(void)
                 long tempReplaced2 = lastNumsCopy % 10;
 
                 long last2Nums = (tempReplaced1 * 10) + tempReplaced2;
-
-                printf("lastnums = %li\n", lastNums);
-
-
-
-
 
                 if(count == 15 && (last2Nums == 34 || last2Nums == 37))
                 {
@@ -138,5 +118,4 @@ int main(void)
             printf("INVALID\n");
         }
 
-    printf("%i\n %i\n", finSumTwice, sumOnce);
 }
