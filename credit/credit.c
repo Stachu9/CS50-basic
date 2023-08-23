@@ -29,9 +29,10 @@ int main(void)
         for(int i = 0; i < count; i ++)
         {
             temp = tempCardNum % multi;
+            printf("Temp: %i = %i % %i\n", temp, tempCardNum, multi);
             tempCardNum = tempCardNum / 10;
 
-            printf("Temp: %i\n", temp);
+
 
             if (flag == 1)
             {
