@@ -83,7 +83,7 @@ int main(void)
             {
                 long tempCardNum2 = cardNum;
                 long last2Nums = 0;
-                int tempDivided;
+                long tempDivided;
 
                 for(int i = 0; i < count; i ++)
                 {
