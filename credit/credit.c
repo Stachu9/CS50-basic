@@ -106,10 +106,14 @@ int main(void)
 
                 }
 
-                long last2Nums = lastNums;
-                long tempReplaced1 = last2Nums % 10;
-                last2Numsy = last2Nums / 10;
+                long lastNumsCopy = lastNums;
+                long tempReplaced1 = lastNumsCopy % 10;
+                lastNumsCopy = lastNumsCopy / 10;
                 long tempReplaced2 = lastNumsCopy % 10;
+
+                long last2Nums = (tempReplaced1 * 10) + tempReplaced2;
+
+                printf("lastnums = %li\n", lastNums);
 
 
 
