@@ -101,7 +101,14 @@ int main(void)
 
                 }
 
-                if()
+                if(count == 15 && (last2Nums == 34 || last2Nums == 37))
+                {
+                    printf("AMEX\n");
+                }
+                if(count == 16 && (last2Nums == 51 || last2Nums == 52 || last2Nums == 53 || last2Nums == 54 || last2Nums == 55))
+                {
+                    printf("MASTERCARD\n");
+                }
             }
         }
         else
