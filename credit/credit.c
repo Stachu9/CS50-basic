@@ -80,7 +80,7 @@ int main(void)
             {
                 tempCardNum2 = tempCardNum2 / 10;
 
-                printf("tempcardnum2 = %li\n", tempCardNum2);
+                printf("i = %i count =  %i\n", i, count);
 
                 if (i > (count - 3))
                 {
