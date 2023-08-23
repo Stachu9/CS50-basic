@@ -80,6 +80,8 @@ int main(void)
             {
                 tempCardNum2 = tempCardNum2 / 10;
 
+                printf("tempcardnum2 = %li\n", tempCardNum2);
+
                 if (i > (count - 3))
                 {
                     last2Nums = last2Nums * 10;
