@@ -72,11 +72,14 @@ int main(void)
 
         if(check % 10 == 0)
         {
-
+            if(temp == 4 && (count == 13 || count == 16))
+            {
+                printf("VISA\n");
+            }
         }
         else
         {
-            printf("INVALID")
+            printf("INVALID\n");
         }
 
     printf("%i\n %i\n", finSumTwice, sumOnce);
