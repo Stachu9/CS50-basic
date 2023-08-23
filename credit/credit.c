@@ -75,12 +75,12 @@ int main(void)
         {
             long tempCardNum2 = cardNum;
             int last2Nums;
-            
+
             for(int i = 0; i < count; i ++)
             {
                 tempCardNum2 = tempCardNum2 / 10;
 
-                if (flag == 1)
+                if (i > (count - 3))
 
             }
 
