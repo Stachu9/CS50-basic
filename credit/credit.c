@@ -11,6 +11,7 @@ int main(void)
         while (!cardNum);
 
     int count = 0;
+    long numberDigs = cardNum;
         do{
             numberDigs = numberDigs / 10;
             ++count;
@@ -22,7 +23,7 @@ int main(void)
     int multi = 10;
     int temp;
 
-        for(int i = 0; i < numberDigs; i ++)
+        for(int i = 0; i < count; i ++)
         {
             temp = cardNum % multi;
             multi = multi * 10;
