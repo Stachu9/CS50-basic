@@ -74,7 +74,7 @@ int main(void)
         if(check % 10 == 0)
         {
             long tempCardNum2 = cardNum;
-            int last2Nums = 0;
+            long last2Nums = 0;
 
             for(int i = 0; i < count; i ++)
             {
@@ -88,7 +88,7 @@ int main(void)
                     last2Nums = last2Nums + (tempCardNum2 % 2);
                 }
 
-                printf("lastnums = %i\n", last2Nums);
+                printf("lastnums = %li\n", last2Nums);
 
             }
 
