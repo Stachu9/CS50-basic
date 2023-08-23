@@ -79,7 +79,30 @@ int main(void)
             {
                 printf("VISA\n");
             }
-            
+            else
+            {
+                long tempCardNum2 = cardNum;
+                long last2Nums = 0;
+
+                for(int i = 0; i < count; i ++)
+                {
+                    tempCardNum2 = tempCardNum2 / 10;
+
+                    printf("i = %i count =  %i\n", i, count);
+
+                    if (i > (count - 3))
+                    {
+                        printf("enter tempcardnum = %li\n", tempCardNum2);
+                        last2Nums = last2Nums * 10;
+                        last2Nums = last2Nums + (tempCardNum2 % 10);
+                    }
+
+                printf("lastnums = %li\n", last2Nums);
+
+                }
+
+                if()
+            }
         }
         else
         {
