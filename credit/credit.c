@@ -12,8 +12,9 @@ int main(void)
 
     int count = 0;
         do{
-            number = number / 10;
+            numberDigs = numberDigs / 10;
             ++count;
-        }while (number != 0);
-        
+        }while (numberDigs != 0);
+
+        for(int i = 0; i < numberDigs)
 }
