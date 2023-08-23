@@ -70,8 +70,20 @@ int main(void)
 
     int check = finSumTwice + sumOnce;
 
+
         if(check % 10 == 0)
         {
+            long tempCardNum2 = cardNum;
+            int last2Nums;
+            
+            for(int i = 0; i < count; i ++)
+            {
+                tempCardNum2 = tempCardNum2 / 10;
+
+                if (flag == 1)
+
+            }
+
             if(temp == 4 && (count == 13 || count == 16))
             {
                 printf("VISA\n");
