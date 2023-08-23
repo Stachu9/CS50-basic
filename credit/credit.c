@@ -65,7 +65,7 @@ int main(void)
         {
             temp2 = tempTwice2 % multi;
             tempTwice2 = tempTwice2 / 10;
-            finSumTwice = finSumTwice + temp;
+            finSumTwice = finSumTwice + temp2;
         }
 
     printf("%i\n %i\n", finSumTwice, sumOnce);
