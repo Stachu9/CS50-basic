@@ -20,7 +20,7 @@ int main(void)
     printf("%i\n", count);
 
     int sumOnce = 0;
-    int sumTwice = 0;
+    long sumTwice = 0;
     int flag = 1;
     int multi = 10;
     int temp;
@@ -42,9 +42,10 @@ int main(void)
             else
             {
                 sumTwice = sumTwice + (temp * 2);
+                sumTwice = sumTwice * 10;
                 flag = 1;
             }
 
         }
-    printf("%i\n %i\n", sumTwice, sumOnce);
+    printf("%li\n %i\n", sumTwice, sumOnce);
 }
