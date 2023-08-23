@@ -16,17 +16,20 @@ int main(void)
     {
         printf(" ");
     }
-    for (int z = 0; z < x; z++)
+
+    for (int z = 0; z < t; z++)
     {
         printf("#");
     }
     printf("  ");
-    for (int z = 0; z < x; z++)
+    for (int z = 0; z < t; z++)
     {
         printf("#");
     }
 
     printf("\n");
+
+    t++;
 
   }
 }
