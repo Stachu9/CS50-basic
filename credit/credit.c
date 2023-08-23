@@ -82,7 +82,7 @@ int main(void)
             else
             {
                 long tempCardNum2 = cardNum;
-                long last2Nums = 0;
+                long lastNums = 0;
                 long tempDivided;
 
                 for(int i = 0; i < count; i ++)
@@ -98,17 +98,17 @@ int main(void)
 
                     if (i > (count - 3))
                     {
-                        last2Nums = last2Nums * 10;
-                        last2Nums = last2Nums + tempDivided;
+                        lastNums = lastNums * 10;
+                        lastNums = lastNums + tempDivided;
                     }
 
-                printf("lastnums = %li\n", last2Nums);
+                printf("lastnums = %li\n", lastNums);
 
                 }
 
-                long lastNumsCopy = last2Nums;
-                long tempReplaced1 = lastNumsCopy % 10;
-                lastNumsCopy = lastNumsCopy / 10;
+                long last2Nums = lastNums;
+                long tempReplaced1 = last2Nums % 10;
+                last2Numsy = last2Nums / 10;
                 long tempReplaced2 = lastNumsCopy % 10;
 
 
