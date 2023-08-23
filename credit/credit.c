@@ -39,5 +39,7 @@ int main(void)
                 flag = 1;
             }
 
+        printf("%i\n %i", sumTwice, sumOnce);
+
         }
 }
