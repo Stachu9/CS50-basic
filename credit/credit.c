@@ -39,8 +39,8 @@ int main(void)
             }
             else
             {
-                sumTwice = sumTwice + (temp * 2);
                 sumTwice = sumTwice * 10;
+                sumTwice = sumTwice + (temp * 2);
                 flag = 1;
             }
         }
@@ -82,7 +82,7 @@ int main(void)
 
                 if (i > (count - 3))
                 {
-                    
+
                 }
 
             }
