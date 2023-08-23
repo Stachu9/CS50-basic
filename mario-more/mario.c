@@ -18,7 +18,6 @@ int main(void)
     for(int j = 1; j < b; j++)
     {
         printf(" ");
-        b--;
     }
     for (int z = 0; z < t; z++)
     {
@@ -33,6 +32,7 @@ int main(void)
     printf("\n");
 
     t++;
+    b--;
 
   }
 }
