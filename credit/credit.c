@@ -45,6 +45,8 @@ int main(void)
             }
         }
 
+        printf("Sumtwice = %li\n", sumTwice);
+
     int countTwice = 0;
     long tempTwice = sumTwice;
         do
