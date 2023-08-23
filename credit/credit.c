@@ -88,10 +88,13 @@ int main(void)
                 for(int i = 0; i < count; i ++)
                 {
                     tempDivided = tempCardNum % 10;
-                    tempCardNum2 = tempCardNum2 / 10;
 
                     printf("%li\n", tempCardNum2);
                     printf("%li\n", tempDivided);
+
+                    tempCardNum2 = tempCardNum2 / 10;
+
+
 
                     if (i > (count - 3))
                     {
