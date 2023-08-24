@@ -3,19 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 
-char * trim(string word);
+char trim(string word);
 
 int main(void)
 {
     string s = "duuuupa";
+    char t[] = trim(s);
 
-    char * b = trim(s);
-
-    printf("%s\n", b);
+    printf("%s\n", t);
 
 }
 
-char * trim(string word)
+char trim(string word)
 {
     int counter;
     int lenght = strlen(word);
