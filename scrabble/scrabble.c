@@ -33,6 +33,7 @@ string word_lower(string word)
 
     for (int i = 0; i < lenght; i++)
     {
-        
+        word[i] = tolower(word[i]);
     }
+    return word;
 }
