@@ -4,9 +4,8 @@
 int main(void)
 {
     string s = "duuuupa";
-    char t = "b;
-    s[2] = t;
+    s[2] = 't';
 
-    printf("%c\n", s[2]);
+    printf("%s\n", s);
 
 }
