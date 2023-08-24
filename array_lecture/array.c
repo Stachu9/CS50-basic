@@ -18,7 +18,7 @@ int main(void)
     for (int i = 1; i < length; i++)
     {
         arr[i] = arr[i-1] * 2;
-        printf("%i\n", arr[1]);
+        printf("%i\n", arr[i]);
     }
 
 
