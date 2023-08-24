@@ -23,10 +23,10 @@ int main(void)
     // TODO: Print the winner
 }
 
-//int compute_score(string word)
-//{
+int compute_score(string word)
+{
     // TODO: Compute and return score for string
-//}
+}
 
 string word_lower(string word)
 {
