@@ -5,8 +5,7 @@ int main(void)
 {
     string s = "duuuupa";
 
-    s[2] = "3";
 
-    printf("%s\n", s);
+    printf("%c\n", s[2]);
 
 }
