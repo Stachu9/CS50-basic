@@ -9,5 +9,11 @@ int main(void)
         length = get_int("Length: ");
     }
     while(length < 1);
-    
+
+    int arr[length];
+
+    for (int i = 0; i < length; i++)
+    {
+
+    }
 }
