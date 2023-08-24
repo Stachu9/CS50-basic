@@ -4,8 +4,14 @@
 int main(void)
 {
     string s = "duuuupa";
-    s[2] = 't';
+    char t = s[2] - 5;
 
-    printf("%s\n", s);
+    if (t == 'p')
+    {
+        printf("enter\n");
+    }
+
+
+    printf("%c\n", t);
 
 }

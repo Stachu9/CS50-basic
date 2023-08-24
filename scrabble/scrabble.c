@@ -8,6 +8,7 @@ int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 
 
 int compute_score(string word);
 string word_lower(string word);
+string trim(string word);
 
 int main(void)
 {
@@ -36,4 +37,14 @@ string word_lower(string word)
         word[i] = tolower(word[i]);
     }
     return word;
+}
+
+string trim(string word)
+{
+    int counter;
+    int lenght = strlen(word);
+    for (int i = 0; i < lenght; i++)
+    {
+        if (word[i])
+    }
 }
