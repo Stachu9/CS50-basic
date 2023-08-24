@@ -38,5 +38,5 @@ string trim(string word)
         }
     }
 
-    return trimmed;
+    return trimmed[];
 }
