@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string trim(string word);
+char trim(string word);
 
 int main(void)
 {
@@ -15,7 +15,7 @@ int main(void)
 
 }
 
-string trim(string word)
+char trim(string word)
 {
     int counter;
     int lenght = strlen(word);
@@ -38,5 +38,5 @@ string trim(string word)
         }
     }
 
-    return trimmed[];
+    return trimmed;
 }
