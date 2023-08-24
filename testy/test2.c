@@ -8,7 +8,7 @@ char trim(string word);
 int main(void)
 {
     string s = "duuuupa";
-    char t[] = trim(s);
+    string t = trim(s);
 
     printf("%s\n", t);
 
