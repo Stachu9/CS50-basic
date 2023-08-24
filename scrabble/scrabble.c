@@ -29,5 +29,10 @@ int compute_score(string word)
 
 string word_lower(string word)
 {
-    
+    int lenght = strlen(word);
+
+    for (int i = 0; i < lenght; i++)
+    {
+        
+    }
 }
