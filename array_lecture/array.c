@@ -11,6 +11,7 @@ int main(void)
     while(length < 1);
 
     int arr[length];
+    arr[0] = 1;
 
     for (int i = 0; i < length; i++)
     {
