@@ -9,9 +9,9 @@ int main(void)
 {
     string s = "duuuupa";
 
-    string b = trim(s);
+    char b = trim(s);
 
-    printf("%s\n", b);
+    printf("%c\n", b);
 
 }
 
