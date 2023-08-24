@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<cs50.h>
+#include<string.h>
 
 int main(void)
 {
@@ -10,7 +11,17 @@ int main(void)
     }
     while(!word);
 
-    
+    int length = strlen(word);
+
+    if (length == 1)
+    {
+        printf("YES");
+    }
+
+    for ( int i = 1; i < lenhtg; i++)
+    {
+        
+    }
 
     int arr[length];
     arr[0] = 1;
