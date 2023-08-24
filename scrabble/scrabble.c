@@ -47,16 +47,20 @@ string trim(string word)
     {
         if ((word[i] >= 65 && word[i] <= 90) || (word[i] >= 97 && word[i] <= 122))
         {
-            counter++
+            counter++;
         }
     }
     char trimmed[counter];
+    int arrCounter = 0;
 
     for (int i = 0; i < lenght; i++)
     {
         if ((word[i] >= 65 && word[i] <= 90) || (word[i] >= 97 && word[i] <= 122))
         {
-            counter++
+            trimmed[arrCounter] = word[i];
+            arrCounter++;
         }
     }
+
+    return trimmed;
 }
