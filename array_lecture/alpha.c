@@ -12,20 +12,21 @@ int main(void)
     while(!word);
 
     int length = strlen(word);
+    printf("%i\n", length);
 
     if (length == 1)
     {
-        printf("YES");
+        printf("YES\n");
     }
 
     for ( int i = 1; i < length; i++)
     {
         if (word[i] < word[i-1])
         {
-            printf("NO");
+            printf("NO\n");
             return 0;
         }
     }
-    printf("YES");
+    printf("YES\n");
     return 0;
 }
