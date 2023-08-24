@@ -8,7 +8,9 @@ int main(void)
     {
         word = get_int("Word: ");
     }
-    while(length < 1);
+    while(!word);
+
+    
 
     int arr[length];
     arr[0] = 1;
