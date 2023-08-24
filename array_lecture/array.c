@@ -12,7 +12,6 @@ int main(void)
 
     int arr[length];
     arr[0] = 1;
-
     printf("%i\n", arr[0]);
 
     for (int i = 1; i < length; i++)
