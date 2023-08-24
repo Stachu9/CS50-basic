@@ -7,7 +7,7 @@ int main(void)
     string word;
     do
     {
-        word = get_int("Word: ");
+        word = get_string("Word: ");
     }
     while(!word);
 
@@ -18,20 +18,15 @@ int main(void)
         printf("YES");
     }
 
-    for ( int i = 1; i < lenhtg; i++)
+    for ( int i = 1; i < length; i++)
     {
-        
+        if (word[i] < word[i-1])
+        {
+            printf("NO");
+        }
     }
-
-    int arr[length];
-    arr[0] = 1;
-    printf("%i\n", arr[0]);
-
-    for (int i = 1; i < length; i++)
+    else
     {
-        arr[i] = arr[i-1] * 2;
-        printf("%i\n", arr[i]);
+        printf("YES");
     }
-
-
 }
