@@ -23,10 +23,9 @@ int main(void)
         if (word[i] < word[i-1])
         {
             printf("NO");
+            return 0;
         }
     }
-    else
-    {
-        printf("YES");
-    }
+    printf("YES");
+    return 0;
 }
