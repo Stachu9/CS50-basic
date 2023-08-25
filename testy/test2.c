@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-char trimmed
 string trim(string word);
 
 int main(void)
@@ -41,6 +40,8 @@ string trim(string word)
         }
     }
 
+    string p = trimmed;
+
     // return array of actual letters
-    return trimmed;
+    return p;
 }
