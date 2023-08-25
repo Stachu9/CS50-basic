@@ -6,10 +6,10 @@
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
 
+int properKeyLength = 26;
 
 int main(int argc, string argv[])
 {
-    int properKeyLength = 26;
 
     if (argc < 2 || argc > 2)
     {
@@ -37,10 +37,11 @@ bool hasOnlyLetters(string key)
 
     for (int i = 0; i < l; i++)
     {
-        if (!(key[i] >= 65 && key[i] <= 90 || key[i] >= 97 && key[i] <= 122))
+        if (!((key[i] >= 65 && key[i] <= 90) || (key[i] >= 97 && key[i] <= 122)))
         {
             return false;
         }
+    }
 
     return true;
 }
