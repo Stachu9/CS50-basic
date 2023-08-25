@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-bool has26chars(string key);
+bool has26Chars(string key);
 
 int main(int argc, string argv[])
 {
@@ -20,4 +20,9 @@ int main(int argc, string argv[])
     }
     while(!plainText);
 
+}
+
+bool has26Chars(string key)
+{
+    return strlen(key) == 26;
 }
