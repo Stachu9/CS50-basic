@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 {
 
-
+    printf("%s\n", argv[0]);
     printf("%i\n", argc);
 
 }
