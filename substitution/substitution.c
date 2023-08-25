@@ -18,7 +18,7 @@ int main(int argc, string argv[])
 
     do
     {
-        string plainText = get_string(plainText);
+        string plainText = get_string("plainText: ");
     }
     while(!plainText);
 
