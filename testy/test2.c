@@ -10,6 +10,8 @@ int main(void)
     string s = "duuuupa";
     string t = trim(s);
 
+//nie wiem czemu, ale do tej linii zmienna t ma wartosc "duuuupa",
+// a w momencie jak wchodzi do print, to zmienna t sie zeruje i nic nie grukuje do konsoli.
     printf("%s\n", t);
 
 }
@@ -39,7 +41,7 @@ string trim(string word)
             arrCounter++;
         }
     }
-    
+
     string p = trimmed;
 
     // return array of actual letters
