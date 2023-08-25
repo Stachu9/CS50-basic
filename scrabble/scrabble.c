@@ -26,6 +26,13 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    int lenght = strlen(word);
+    int points = 0;
+
+    fot (int i = 0; i < lenght; i++)
+    {
+        if ()
+    }
 }
 
 string word_lower(string word)
