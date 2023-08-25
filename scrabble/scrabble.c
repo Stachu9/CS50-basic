@@ -7,8 +7,7 @@
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 int compute_score(string word);
-string word_lower(string word);
-string trim(string word);
+
 
 int main(void)
 {
@@ -21,6 +20,18 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (score1 < score2)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
 }
 
 int compute_score(string word)
@@ -29,48 +40,16 @@ int compute_score(string word)
     int lenght = strlen(word);
     int points = 0;
 
-    fot (int i = 0; i < lenght; i++)
+    for (int i = 0; i < lenght; i++)
     {
         if (word[i] >= 65 && word[i] <= 90)
         {
-            points += POINTS[word[i] - 65]
+            points += POINTS[word[i] - 65];
         }
-    }
-}
-
-string word_lower(string word)
-{
-    int lenght = strlen(word);
-
-    for (int i = 0; i < lenght; i++)
-    {
-        word[i] = tolower(word[i]);
-    }
-    return word;
-}
-
-string trim(string word)
-{
-    int counter;
-    int lenght = strlen(word);
-    for (int i = 0; i < lenght; i++)
-    {
-        if ((word[i] >= 65 && word[i] <= 90) || (word[i] >= 97 && word[i] <= 122))
+        else if (word[i] >= 97 && word[i] <= 122)
         {
-            counter++;
+            points += POINTS[word[i] - 97];
         }
     }
-    char trimmed[counter];
-    int arrCounter = 0;
-
-    for (int i = 0; i < lenght; i++)
-    {
-        if ((word[i] >= 65 && word[i] <= 90) || (word[i] >= 97 && word[i] <= 122))
-        {
-            trimmed[arrCounter] = word[i];
-            arrCounter++;
-        }
-    }
-
-    return trimmed;
+    return points;
 }
