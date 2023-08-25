@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
+bool test_num_key_chars(string key);
+
 int main(int argc, string argv[])
 {
     if (argc < 2 || argc > 2)
