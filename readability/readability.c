@@ -3,6 +3,7 @@
 #include <string.h>
 
 int count_letters(string text);
+int count_words(string text);
 
 int main(void)
 {
@@ -14,14 +15,16 @@ int main(void)
     while (!text);
 
     printf("%i\n", count_letters(text));
+    printf("%i\n", count_words(text));
+
 }
 
 int count_letters(string text)
 {
-    int lenght = strlen(text);
+    int length = strlen(text);
     int lettersCounter = 0;
 
-    for (int i = 0; i < lenght; i++)
+    for (int i = 0; i < length; i++)
     {
         if (text[i] >= 65 && text[i] <= 90)
         {
@@ -33,5 +36,22 @@ int count_letters(string text)
         }
     }
     return lettersCounter;
+
+}
+
+int count_words(string text)
+{
+    int length = strlen(text);
+    int wordsCounter = 1;
+
+    for (int i = 0; i < length; i++)
+    {
+        if (text[i] == 32)
+        {
+            wordsCounter++;
+        }
+
+    }
+    return wordsCounter;
 
 }
