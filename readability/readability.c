@@ -6,7 +6,12 @@ int count_letters(string text);
 
 int main(void)
 {
-    string text = get_string("Text: ");
+    string text;
+    do
+    {
+        text = get_string("Text: ");
+    }
+    while (!text);
 
     printf("%i\n", count_letters(text));
 }
