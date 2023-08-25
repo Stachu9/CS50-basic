@@ -39,7 +39,7 @@ string trim(string word)
             arrCounter++;
         }
     }
-    printf("enter\n");
+    
     string p = trimmed;
 
     // return array of actual letters
