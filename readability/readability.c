@@ -1,15 +1,32 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int count_letters(string text);
 
 int main(void)
 {
+    string text = get_string("Text: ");
 
+    printf("%i\n", count_letters(text));
 }
 
 int count_letters(string text)
 {
-    int counter = 0;
-    
+    int lenght = strlen(text);
+    int lettersCounter = 0;
+
+    for (int i = 0; i < lenght; i++)
+    {
+        if (text[i] >= 65 && text[i] <= 90)
+        {
+            lettersCounter++;
+        }
+        else if (text[i] >= 97 && text[i] <= 122)
+        {
+            lettersCounter++;
+        }
+    }
+    return lettersCounter;
+
 }
