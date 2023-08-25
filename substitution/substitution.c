@@ -9,16 +9,18 @@ bool hasOnlyLetters(string key);
 
 int main(int argc, string argv[])
 {
+    int properKeyLength = 26;
+
     if (argc < 2 || argc > 2)
     {
         printf("Usage: %s\n", argv[0]);
         return 1;
     }
 
-
+    string plainText;
     do
     {
-        string plainText = get_string("plainText: ");
+        plainText = get_string("plainText: ");
     }
     while(!plainText);
 
@@ -26,7 +28,7 @@ int main(int argc, string argv[])
 
 bool has26Chars(string key)
 {
-    return strlen(key) == KEY_LENGTH;
+    return strlen(key) == properKeyLength;
 }
 
 bool hasOnlyLetters(string key)
