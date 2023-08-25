@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char trim(string word);
+string trim(string word);
 
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
 
 }
 
-char trim(string word)
+string trim(string word)
 {
     //count actual letters in word
     int counter;
