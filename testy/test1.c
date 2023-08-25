@@ -3,11 +3,10 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int main(int argc, string argv[])
 {
-    string word = "dupa, auto!!";
-    int lenght = strlen(word);
 
-    printf("%i\n", lenght);
+
+    printf("%i\n", argc);
 
 }
