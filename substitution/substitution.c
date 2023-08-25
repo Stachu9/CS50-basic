@@ -6,7 +6,6 @@
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
 
-int KEY_LENGTH = 26;
 
 int main(int argc, string argv[])
 {
@@ -32,8 +31,9 @@ bool has26Chars(string key)
 
 bool hasOnlyLetters(string key)
 {
+    int l = strlen(key);
 
-    for (int i = 0; i < KEY_LENGTH; i++)
+    for (int i = 0; i < l; i++)
     {
         if (!(key[i] >= 65 && key[i] <= 90 || key[i] >= 97 && key[i] <= 122))
         {
