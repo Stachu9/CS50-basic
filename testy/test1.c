@@ -5,9 +5,9 @@
 
 int main(void)
 {
-    int points[] = {976, 656, 65, 343, 23, 656, 234, 5453, 434};
-    string s = "ABCDEFG";
+    string word = "dupa, auto!!";
+    int lenght = strlen(word);
 
-    printf("%i\n", points[s[0] - 65]);
+    printf("%i\n", lenght);
 
 }
