@@ -20,8 +20,11 @@ int main(void)
     printf("%i\n", count_words(text));
     printf("%i\n", count_sentences(text));
 
-    int l = (count_letters(text) / count_words(text)) * 100;
-    int s = (count_sentences(text) / count_words(text))) * 100
+    float l = (count_letters(text) / count_words(text)) * 100;
+    float s = (count_sentences(text) / count_words(text))) * 100;
+    float grade = 0.0588 * l - 0.296 * s - 15.8;
+
+    if (grade )
 
 }
 
