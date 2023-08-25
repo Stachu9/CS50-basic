@@ -61,7 +61,7 @@ int count_words(string text)
 int count_sentences(string text)
 {
     int length = strlen(text);
-    int centenceCounter = 1;
+    int centenceCounter = 0;
 
     for (int i = 0; i < length; i++)
     {
