@@ -40,6 +40,6 @@ char trim(string word)
         }
     }
 
-    // return array 
+    // return array of actual letters
     return trimmed;
 }
