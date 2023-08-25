@@ -31,7 +31,10 @@ int compute_score(string word)
 
     fot (int i = 0; i < lenght; i++)
     {
-        if ()
+        if (word[i] >= 65 && word[i] <= 90)
+        {
+            points += POINTS[word[i] - 65]
+        }
     }
 }
 

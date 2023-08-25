@@ -5,9 +5,9 @@
 
 int main(void)
 {
+    int points[] = {976, 656, 65, 343, 23, 656, 234, 5453, 434};
     string s = "ABCDEFG";
-    s[2] = tolower(s[2]);
 
-    printf("%s\n", s);
+    printf("%i\n", points[s[0] - 65]);
 
 }
