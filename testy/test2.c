@@ -16,6 +16,7 @@ int main(void)
 
 char trim(string word)
 {
+    //count actual letters in word
     int counter;
     int lenght = strlen(word);
     for (int i = 0; i < lenght; i++)
@@ -25,6 +26,8 @@ char trim(string word)
             counter++;
         }
     }
+
+    //create array of only actual letters
     char trimmed[counter];
     int arrCounter = 0;
 
@@ -37,5 +40,6 @@ char trim(string word)
         }
     }
 
+    // return array 
     return trimmed;
 }
