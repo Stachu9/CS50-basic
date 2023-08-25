@@ -5,9 +5,9 @@
 
 int main(void)
 {
-    string s = "abcdefgh";
-    s[2] = 'z';
+    char c[] = "abcdefgh\n";
+    c[2] = 'z';
 
-    printf("%s", s);
+    printf("%s", c);
 
 }
