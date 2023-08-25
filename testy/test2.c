@@ -44,7 +44,7 @@ string trim(string word)
 //jak tutaj dodalem printa, ktory drukuje cokolwiek, to tamten print w MAIN,
 // ktory wczesniej dzialal zle, teraz dziala dobrze.
 // nic wiecej nie zmienialem, tylko tutaj dodalem printa ktory drukuje cokolwiek.
-    //printf("cokolwiek\n");
+    printf("cokolwiek\n");
 
     string p = trimmed;
 
