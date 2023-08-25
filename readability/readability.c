@@ -16,6 +16,10 @@ int main(void)
     }
     while (!text);
 
+    printf("%i\n", count_letters(text));
+    printf("%i\n", count_words(text));
+    printf("%i\n", count_sentences(text));
+
     float l = (count_letters(text) / count_words(text)) * 100;
     float s = (count_sentences(text) / count_words(text)) * 100;
     float grade = 0.0588 * l - 0.296 * s - 15.8;
