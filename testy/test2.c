@@ -17,7 +17,7 @@ int main(void)
 string trim(string word)
 {
     //count actual letters in word
-    int counter;
+    int counter = 0;
     int lenght = strlen(word);
     for (int i = 0; i < lenght; i++)
     {
