@@ -4,6 +4,9 @@
 #include <string.h>
 
 bool has26Chars(string key);
+bool hasOnlyLetters(string key);
+
+int KEY_LENGTH = 26;
 
 int main(int argc, string argv[])
 {
@@ -24,5 +27,10 @@ int main(int argc, string argv[])
 
 bool has26Chars(string key)
 {
-    return strlen(key) == 26;
+    return strlen(key) == KEY_LENGTH;
+}
+
+bool hasOnlyLetters(string key)
+{
+    int l = strlen(key)
 }
