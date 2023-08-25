@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-bool test_num_key_chars(string key);
+bool has26chars(string key);
 
 int main(int argc, string argv[])
 {
