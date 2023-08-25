@@ -3,12 +3,9 @@
 
 int main(void)
 {
-    char[2] x = "a";
-    char y = "b";
-    string z = "";
+    string s = "abcdefgh";
+    s[2] = "z";
 
-    string j = x + y;
-
-    printf("%s", j)
+    printf("%s", s);
 
 }
