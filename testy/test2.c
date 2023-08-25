@@ -10,6 +10,10 @@ int main(void)
     string s = "duuuupa";
     string t = trim(s);
 
+//nie wiem czemu, ale do tej linii zmienna t ma wartosc "duuuupa",
+// a w momencie jak wchodzi do print, to zmienna t sie zeruje
+// i nic nie drukuje.
+
     printf("%s\n", t);
 
 }
@@ -40,11 +44,6 @@ string trim(string word)
             arrCounter++;
         }
     }
-
-//jak tutaj dodalem printa, ktory drukuje cokolwiek, to tamten print w MAIN,
-// ktory wczesniej dzialal zle, teraz dziala dobrze.
-// nic wiecej nie zmienialem, tylko tutaj dodalem printa ktory drukuje cokolwiek.
-    printf("cokolwiek\n");
 
     string p = trimmed;
 
