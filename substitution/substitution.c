@@ -32,5 +32,14 @@ bool has26Chars(string key)
 
 bool hasOnlyLetters(string key)
 {
-    int l = strlen(key)
+    int l = strlen(key);
+
+    for (int i = 0; i < l; i++)
+    {
+        if (!(key[i] >= 65 && key[i] <= 90 || key[i] >= 97 && key[i] <= 122))
+        {
+            return false;
+        }
+
+    return true;
 }
