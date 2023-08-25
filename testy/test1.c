@@ -5,9 +5,9 @@
 
 int main(void)
 {
-    char c[] = "abcdefgh\n";
-    c[2] = 'z';
+    string s = "ABCDEFG";
+    s[2] = tolower(s[2]);
 
-    printf("%s", c);
+    printf("%s\n", s);
 
 }
