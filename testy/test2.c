@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
+char trimmed
 string trim(string word);
 
 int main(void)
