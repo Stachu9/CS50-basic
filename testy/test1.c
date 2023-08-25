@@ -6,7 +6,7 @@
 int main(void)
 {
     string s = "abcdefgh";
-    s[2] = "z";
+    s[2] = 'z';
 
     printf("%s", s);
 
