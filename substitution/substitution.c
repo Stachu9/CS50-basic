@@ -6,6 +6,7 @@
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
 bool hasDifferentLetters(string key);
+string encrypting(string key, string plaintext);
 
 int properKeyLength = 26;
 
@@ -69,4 +70,9 @@ bool hasDifferentLetters(string key)
         }
     }
     return true;
+}
+
+string encrypring(string key, string plaintext)
+{
+    
 }
