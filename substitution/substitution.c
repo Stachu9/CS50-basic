@@ -11,6 +11,7 @@ int properKeyLength = 26;
 
 int main(int argc, string argv[])
 {
+    string key = argv[1];
 
     if (argc !== 2 )
     {
@@ -18,7 +19,11 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (!)
+    if (!has26Chars(string key) || !hasOnlyLetters(string key) || !hasDifferentLetters(string key))
+    {
+        printf("Key must contain 26 different letters.");
+        return 1;
+    }
 
     string plainText;
     do
