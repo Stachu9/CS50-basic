@@ -78,6 +78,9 @@ string encrypring(string key, string plaintext)
 
     for (int i = 0; i < l; i++)
     {
-        
+        if (((plaintext[i] >= 65 && plaintext[i] <= 90) || (plaintext[i] >= 97 && plaintext[i] <= 122)))
+        {
+            return false;
+        }
     }
 }
