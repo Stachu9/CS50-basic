@@ -18,6 +18,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    if (!)
+
     string plainText;
     do
     {
