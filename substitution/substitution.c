@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
@@ -84,11 +85,11 @@ void encrypring(string key, string plaintext)
     {
         if (plaintext[i] >= 65 && plaintext[i] <= 90)
         {
-            plaintext[i] = toupper(key[plaintext[i] - 65])
+            plaintext[i] = toupper(key[plaintext[i] - 65]);
         }
         else if (plaintext[i] >= 97 && plaintext[i] <= 122)
         {
-            plaintext[i] = tolower(key[plaintext[i] - 97])
+            plaintext[i] = tolower(key[plaintext[i] - 97]);
         }
     }
 }
