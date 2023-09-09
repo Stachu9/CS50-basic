@@ -35,6 +35,8 @@ int main(int argc, string argv[])
 
     string ciphertext = encrypting(string key, string plaintext);
 
+    printf("ciphertext: %s\n", ciphertext);
+
 }
 
 bool has26Chars(string key)
