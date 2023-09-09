@@ -5,6 +5,7 @@
 
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
+bool hasDifferentLetters(string key);
 
 int properKeyLength = 26;
 
@@ -43,5 +44,22 @@ bool hasOnlyLetters(string key)
         }
     }
 
+    return true;
+}
+
+bool hasDifferentLetters(string key)
+{
+    int l = strlen(key);
+
+    for (int i = 0; i < l-1; i++)
+    {
+        for (int j = i+1; j < l; j++)
+        {
+            if (key[i] == key[j])
+            {
+                return false;
+            }
+        }
+    }
     return true;
 }
