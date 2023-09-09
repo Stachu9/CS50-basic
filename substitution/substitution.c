@@ -20,7 +20,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (!has26Chars(string key) || !hasOnlyLetters(string key) || !hasDifferentLetters(string key))
+    if (!has26Chars(key) || !hasOnlyLetters(key) || !hasDifferentLetters(key))
     {
         printf("Key must contain 26 different letters.");
         return 1;
@@ -33,7 +33,7 @@ int main(int argc, string argv[])
     }
     while(!plainText);
 
-    string ciphertext = encrypting(string key, string plaintext);
+    string ciphertext = encrypting(key, plainText);
 
     printf("ciphertext: %s\n", ciphertext);
 
