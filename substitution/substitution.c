@@ -33,9 +33,9 @@ int main(int argc, string argv[])
     }
     while(!plainText);
 
-    string ciphertext = encrypting(key, plainText);
+    encrypting(key, plainText);
 
-    printf("ciphertext: %s\n", ciphertext);
+    printf("ciphertext: %s\n", plainText);
 
 }
 
