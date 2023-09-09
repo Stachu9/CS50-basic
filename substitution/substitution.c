@@ -33,7 +33,7 @@ int main(int argc, string argv[])
     }
     while(!plainText);
 
-    string ciphertext = 
+    string ciphertext = encrypting(string key, string plaintext);
 
 }
 
