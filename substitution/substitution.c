@@ -77,7 +77,7 @@ bool hasDifferentLetters(string key)
     return true;
 }
 
-void encrypring(string key, string plaintext)
+void encrypting(string key, string plaintext)
 {
     int l = strlen(plaintext);
 
