@@ -6,7 +6,7 @@
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
 bool hasDifferentLetters(string key);
-string encrypting(string key, string plaintext);
+void encrypting(string key, string plaintext);
 
 int properKeyLength = 26;
 
@@ -32,6 +32,8 @@ int main(int argc, string argv[])
         plainText = get_string("plainText: ");
     }
     while(!plainText);
+
+    string ciphertext = 
 
 }
 
@@ -72,7 +74,7 @@ bool hasDifferentLetters(string key)
     return true;
 }
 
-string encrypring(string key, string plaintext)
+void encrypring(string key, string plaintext)
 {
     int l = strlen(plaintext);
 
