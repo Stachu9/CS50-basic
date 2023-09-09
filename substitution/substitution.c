@@ -1,8 +1,8 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 bool has26Chars(string key);
 bool hasOnlyLetters(string key);
@@ -15,7 +15,7 @@ int main(int argc, string argv[])
 {
     string key = argv[1];
 
-    if (argc != 2 )
+    if (argc != 2)
     {
         printf("Usage: %s\n", argv[0]);
         return 1;
@@ -32,12 +32,11 @@ int main(int argc, string argv[])
     {
         plainText = get_string("plainText: ");
     }
-    while(!plainText);
+    while (!plainText);
 
     encrypting(key, plainText);
 
     printf("ciphertext: %s\n", plainText);
-
 }
 
 bool has26Chars(string key)
@@ -64,9 +63,9 @@ bool hasDifferentLetters(string key)
 {
     int l = strlen(key);
 
-    for (int i = 0; i < l-1; i++)
+    for (int i = 0; i < l - 1; i++)
     {
-        for (int j = i+1; j < l; j++)
+        for (int j = i + 1; j < l; j++)
         {
             if (key[i] == key[j])
             {
