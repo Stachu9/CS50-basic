@@ -74,5 +74,10 @@ bool hasDifferentLetters(string key)
 
 string encrypring(string key, string plaintext)
 {
-    
+    int l = strlen(plaintext);
+
+    for (int i = 0; i < l; i++)
+    {
+        
+    }
 }
