@@ -7,7 +7,7 @@ string trim(string word);
 
 int main(void)
 {
-    string s = "duuuupa";
+    string s = "duuu(*&*^*&upa";
     string t = trim(s);
 
 //nie wiem czemu, ale do tej linii zmienna t ma wartosc "duuuupa",
