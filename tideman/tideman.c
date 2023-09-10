@@ -124,12 +124,21 @@ void record_preferences(int ranks[])
             {
                 tempCandidateArr[tempArrCounter] = j;
                 tempArrCounter += 1;
-                preferences[j][MAX]
+
+                for (int z = 0; z < candidate_count; z++)
+                {
+                    preferences[j][MAX]
+                }
             }
         }
     }
 
     return;
+}
+
+bool isInArr(int arr[], int b)
+{
+    for (int i = 0; i < )
 }
 
 // Record pairs of candidates where one is preferred over the other
