@@ -125,7 +125,7 @@ void record_preferences(int ranks[])
         {
             if (!isInArr(tempCandidateArr[], j))
             {
-                preferences[ranks[i]][j]
+                preferences[ranks[i]][j] += 1;
             }
         }
     }
