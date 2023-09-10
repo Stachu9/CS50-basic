@@ -140,7 +140,7 @@ bool isInArr(int arr[], int b)
         if (arr[i] == b)
             return true;
     }
-    return false
+    return false;
 }
 
 // Record pairs of candidates where one is preferred over the other
