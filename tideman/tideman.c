@@ -135,7 +135,7 @@ void record_preferences(int ranks[])
 
 bool isInArr(int arr[], int b)
 {
-    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+    for (int i = 0; i < MAX; i++)
     {
         if (arr[i] == b)
             return true;
