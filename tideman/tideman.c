@@ -120,7 +120,7 @@ void record_preferences(int ranks[])
     int tempArrCounter = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        preferences[ranks[i]][MAX]
     }
 
     return;
