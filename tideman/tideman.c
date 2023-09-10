@@ -121,6 +121,7 @@ void record_preferences(int ranks[])
         {
             if (strcmp(ranks[i], candidates[j]) == 0)
             {
+                
                 preferences[j][MAX]
             }
         }
