@@ -120,20 +120,7 @@ void record_preferences(int ranks[])
     int tempArrCounter = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (strcmp(ranks[i], candidates[j]) == 0)
-            {
-                tempCandidateArr[tempArrCounter] = j;
-                tempArrCounter += 1;
-
-                for (int z = 0; z < candidate_count; z++)
-                {
-                    if (!isInArr(tempCandidateArr, z))
-                    preferences[j][z] += 1;
-                }
-            }
-        }
+      
     }
 
     return;
