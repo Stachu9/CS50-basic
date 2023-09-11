@@ -6,7 +6,11 @@
 int main(int argc, string argv[])
 {
 
-    printf("%s\n", argv[0]);
-    printf("%i\n", argc);
+    bool arr[] = {false, false, true, true, false, false, false};
+
+    if (isInArr(arr, true))
+    {
+        printf("Works!");
+    }
 
 }
