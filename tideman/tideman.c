@@ -158,6 +158,7 @@ void add_pairs(void)
                 pairs[pair_count].loser = j;
                 pairs[pair_count].strength = preferences[i][j];
                 pair_count += 1;
+                printf("paircount +1");
             }
         }
     }
