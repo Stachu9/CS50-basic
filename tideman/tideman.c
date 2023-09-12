@@ -199,6 +199,16 @@ void lock_pairs(void)
     return;
 }
 
+bool isTreueIn(bool arr[])
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (arr[i] == b)
+            return true;
+    }
+    return false;
+}
+
 // Print the winner of the election
 void print_winner(void)
 {
