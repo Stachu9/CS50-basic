@@ -33,6 +33,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
+bool has_cycle(int winner, int loser);
 void print_winner(void);
 int findWinner(void);
 
@@ -176,26 +177,10 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-       locked[pairs[i].winner][pairs[i].loser] = true;
-
-        int temp = 0;
-        for (int z = 0; z < candidate_count; z++)
+        if (!has_cycle(pairs[i].winner, pairs[i].loser))
         {
-            for (int j = 0; j < candidate_count; j++)
-            {
-                if (locked[z][j])
-                {
-                    temp += 1;
-                    break;
-                }
-            }
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
-        if (temp == candidate_count)
-        {
-            locked[pairs[i].winner][pairs[i].loser] = false;
-            return;
-        }
-    }
     return;
 }
 
