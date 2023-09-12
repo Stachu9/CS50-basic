@@ -201,7 +201,7 @@ void lock_pairs(void)
         {
             for (int j = 0; j < candidate_count; j++)
             {
-                if (arr[z][j])
+                if (locked[z][j])
                 {
                     temp += 1;
                     break;
