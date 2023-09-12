@@ -31,6 +31,7 @@ int candidate_count;
 bool vote(int rank, string name, int ranks[]);
 void record_preferences(int ranks[]);
 void add_pairs(void);
+int pair_weight(int i);
 void sort_pairs(void);
 void lock_pairs(void);
 bool has_cycle(int winner, int loser);
@@ -150,16 +151,23 @@ void add_pairs(void)
     return;
 }
 
+int pair_weight(int i)
+{
+    int pair_winner = pairs[i].winner;
+    int pair_loser = pairs[i].loser;
+    return preferences[pair_winner][pair_loser];
+}
+
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
     for (int i = pair_count - 1; i >= 0; i--)
     {
-        int min_weight = stren[i];
+        int min_weight = pair_weight(i);
         int min_idx = i;
         for (int j = i-1; j>=0; j--)
         {
-            if (stren[j] < min_weight)
+            if (pair_weight(j) < min_weight)
             {
                 min_weight = stren[j];
                 min_idx = j;
