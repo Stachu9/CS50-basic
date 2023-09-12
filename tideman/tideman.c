@@ -18,7 +18,7 @@ typedef struct
     int loser;
 } pair;
 
-int str[MAX * (MAX - 1) / 2];
+int stren[MAX * (MAX - 1) / 2];
 
 // Array of candidates
 string candidates[MAX];
@@ -141,7 +141,7 @@ void add_pairs(void)
             {
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
-                str[pair_count] = preferences[i][j];
+                stren[pair_count] = preferences[i][j];
                 pair_count += 1;
             }
         }
@@ -152,19 +152,16 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = pair_count - 1; i >= 0; i--)
     {
-        for (int j = 0; j < pair_count - i - 1; j++)
+        int min_weight = stren[i];
+        int min_idx = i;
+        for (int j = i-1; j>=0; j--)
         {
-            if (str[j] < str[j + 1])
+            if (stren[j] < min_weight)
             {
-                pair temp = pairs[j];
-                pairs[j] = pairs[j + 1];
-                pairs[j + 1] = temp;
-
-                int temp2 = str[j];
-                str[j] = str[j + 1];
-                str[j + 1] = temp2;
+                min_weight = stren[j];
+                min_idx = j;
             }
         }
     }
