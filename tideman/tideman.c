@@ -34,7 +34,7 @@ void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
 bool isInArr(int arr[], int b, int length);
-bool isTreueIn(bool arr[]);
+bool isTreueIn(bool arr[][]);
 int findWinner(void);
 
 int main(int argc, string argv[])
