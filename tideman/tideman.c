@@ -200,7 +200,7 @@ void lock_pairs(void)
     return;
 }
 
-bool isTreueIn(bool arr[])
+bool isTreueIn(bool arr[][])
 {
     int temp = 0;
     for (int i = 0; i < candidate_count; i++)
