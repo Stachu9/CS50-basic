@@ -19,6 +19,8 @@ typedef struct
     int strength;
 } pair;
 
+int str
+
 // Array of candidates
 string candidates[MAX];
 pair pairs[MAX * (MAX - 1) / 2];
