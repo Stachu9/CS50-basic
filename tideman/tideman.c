@@ -34,7 +34,6 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-bool isInArr(int arr[], int b, int length);
 int findWinner(void);
 
 int main(int argc, string argv[])
@@ -118,35 +117,18 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    int tempCandidateArr[candidate_count];
-    for (int z = 0; z < candidate_count; z++)
-    {
-        tempCandidateArr[z] = -1;
-    }
-
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        tempCandidateArr[i] = ranks[i];
-        for (int j = 0; j < candidate_count; j++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
-            if (!isInArr(tempCandidateArr, ranks[j], MAX))
-            {
-                preferences[ranks[i]][ranks[j]] += 1;
-            }
+
+            preferences[ranks[i]][ranks[j]] += 1;
         }
     }
 
     return;
 }
 
-bool isInArr(int arr[], int b, int length)
-{
-    for (int i = 0; i < length; i++)
-    {
-        if (arr[i] == b)
-            return true;
-    }
-    return false;
 }
 
 // Record pairs of candidates where one is preferred over the other
