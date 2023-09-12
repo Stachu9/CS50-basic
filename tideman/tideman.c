@@ -34,6 +34,7 @@ void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
 bool isInArr(int arr[], int b, int length);
+bool isTreueIn(bool arr[]);
 int findWinner(void);
 
 int main(int argc, string argv[])
@@ -201,13 +202,21 @@ void lock_pairs(void)
 
 bool isTreueIn(bool arr[])
 {
+    int temp = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (arr[i][])
-            return true;
+            if (arr[i][j])
+            {
+                temp += 1;
+                break;
+            }
         }
+    }
+    if (temp < candidate_count - 1)
+    {
+        return true;
     }
     return false;
 }
