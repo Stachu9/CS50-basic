@@ -16,10 +16,9 @@ typedef struct
 {
     int winner;
     int loser;
-    int strength;
 } pair;
 
-int str
+int str[MAX * (MAX - 1) / 2];
 
 // Array of candidates
 string candidates[MAX];
@@ -161,7 +160,7 @@ void add_pairs(void)
             {
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
-                pairs[pair_count].strength = preferences[i][j];
+                str[pair_count] = preferences[i][j];
                 pair_count += 1;
             }
         }
@@ -176,12 +175,15 @@ void sort_pairs(void)
     {
         for (int j = 0; j < pair_count - i - 1; j++)
         {
-            if (pairs[j].strength < pairs[j + 1].strength)
+            if (str[j] < str[j + 1])
             {
-                printf("Enter\n");
                 pair temp = pairs[j];
                 pairs[j] = pairs[j + 1];
                 pairs[j + 1] = temp;
+
+                int temp2 = str[j];
+                str[j] = str[j + 1];
+                str[j + 1] = temp2;
             }
         }
     }
