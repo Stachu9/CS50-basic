@@ -164,6 +164,9 @@ void sort_pairs(void)
                 min_idx = j;
             }
         }
+        pair temp = pairs[min_idx];
+        pairs[min_idx] = pairs[i];
+        pairs[i] = temp;
     }
     return;
 }
