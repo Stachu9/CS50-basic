@@ -203,8 +203,11 @@ bool isTreueIn(bool arr[])
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (arr[i] == b)
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (arr[i][])
             return true;
+        }
     }
     return false;
 }
