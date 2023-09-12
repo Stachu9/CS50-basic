@@ -17,8 +17,7 @@ typedef struct
     int winner;
     int loser;
     int strength;
-}
-pair;
+} pair;
 
 // Array of candidates
 string candidates[MAX];
