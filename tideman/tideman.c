@@ -181,6 +181,7 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
+    }
     return;
 }
 
@@ -197,6 +198,7 @@ bool has_cycle(int winner, int loser)
             return true;
         }
     }
+    return false;
 }
 
 
