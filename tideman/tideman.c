@@ -131,7 +131,6 @@ void record_preferences(int ranks[])
     return;
 }
 
-
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
@@ -165,7 +164,7 @@ void sort_pairs(void)
     {
         int min_weight = pair_weight(i);
         int min_idx = i;
-        for (int j = i-1; j>=0; j--)
+        for (int j = i - 1; j >= 0; j--)
         {
             if (pair_weight(j) < min_weight)
             {
@@ -201,14 +200,13 @@ bool has_cycle(int winner, int loser)
     }
     for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[loser][i] == true && has_cycle(winner,i))
+        if (locked[loser][i] == true && has_cycle(winner, i))
         {
             return true;
         }
     }
     return false;
 }
-
 
 // Print the winner of the election
 void print_winner(void)
