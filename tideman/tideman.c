@@ -164,11 +164,10 @@ void sort_pairs(void)
                 min_idx = j;
             }
         }
-
+        pair temp = pairs[min_idx];
+        pairs[min_idx] = pairs[i];
+        pairs[i] = temp;
     }
-    pair temp = pairs[min_idx];
-    pairs[min_idx] = pairs[i];
-    pairs[i] = temp;
     return;
 }
 
@@ -198,6 +197,21 @@ void lock_pairs(void)
         }
     }
     return;
+}
+
+bool has_cycle(int winner, int loser)
+{
+    if (locked[loser][winner] == true)
+    {
+        return true;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (locked[loser][i] == true && has_cycle(winner,i))
+        {
+            return true;
+        }
+    }
 }
 
 
