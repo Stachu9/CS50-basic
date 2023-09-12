@@ -125,7 +125,7 @@ void record_preferences(int ranks[])
         tempCandidateArr[i] = ranks[i];
         for (int j = 0; j < candidate_count; j++)
         {
-            if (!isInArr(tempCandidateArr, j, MAX))
+            if (!isInArr(tempCandidateArr, ranks[j], MAX))
             {
                 preferences[ranks[i]][j] += 1;
             }
