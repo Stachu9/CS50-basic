@@ -34,7 +34,6 @@ void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
 bool isInArr(int arr[], int b, int length);
-bool isTreueIn(bool arr[][]);
 int findWinner(void);
 
 int main(int argc, string argv[])
@@ -196,30 +195,27 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count - 1; i++)
     {
        locked[pairs[i].winner][pairs[i].loser] = true;
+
+        int temp = 0;
+        for (int z = 0; z < candidate_count; z++)
+        {
+            for (int j = 0; j < candidate_count; j++)
+            {
+                if (arr[z][j])
+                {
+                    temp += 1;
+                    break;
+                }
+            }
+        }
+        if (temp == candidate_count - 1)
+        {
+            return true;
+        }
     }
     return;
 }
 
-bool isTreueIn(bool arr[][])
-{
-    int temp = 0;
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (arr[i][j])
-            {
-                temp += 1;
-                break;
-            }
-        }
-    }
-    if (temp < candidate_count - 1)
-    {
-        return true;
-    }
-    return false;
-}
 
 // Print the winner of the election
 void print_winner(void)
