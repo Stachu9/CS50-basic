@@ -93,6 +93,7 @@ int main(int argc, string argv[])
     }
 
     add_pairs();
+    printf("pair count: %i\n", pair_count);
     sort_pairs();
     lock_pairs();
     print_winner();
@@ -166,12 +167,14 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
+    printf("pair count: %i\n", pair_count);
     for (int i = 0; i < pair_count - 1; i++)
     {
         for (int j = 0; j < pair_count - i - 1; j++)
         {
             if (pairs[j].strength < pairs[j + 1].strength)
             {
+                printf("Enter\n");
                 pair temp = pairs[j];
                 pairs[j] = pairs[j + 1];
                 pairs[j + 1] = temp;
