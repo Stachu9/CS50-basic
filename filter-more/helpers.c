@@ -44,7 +44,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             int zMin = i - 1;
-            if (zMIn < 0)
+            if (zMin < 0)
             {
                 zMin = 0;
             }
@@ -56,7 +56,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             int xMin = j - 1;
-            if (xMIn < 0)
+            if (xMin < 0)
             {
                 xMin = 0;
             }
