@@ -81,7 +81,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     avRed += image[z][x].rgbtRed;
                     avGreen += image[z][x].rgbtGreen;
                     avBlue += image[z][x].rgbtBlue;
-                    printf("coordinates: %i, %i. Red: %i, avRed: %i\n", z, x, image[z][x].rgbtRed, avRed);
+                    printf("coordinates: %i, %i. Blue: %i, avBlue: %i\n", z, x, image[z][x].rgbtBlue, avBlue);
                     counter ++;
                 }
             }
