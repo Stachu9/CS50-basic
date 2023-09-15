@@ -39,9 +39,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempImage[height][width];
 
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < 2; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < 2; j++)
         {
             int zMin = i - 1;
             if (zMin < 0)
@@ -80,6 +80,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     avRed += image[z][x].rgbtRed;
                     avGreen += image[z][x].rgbtGreen;
                     avBlue += image[z][x].rgbtBlue;
+                    printf("coordinates: %i, %i. Red: %i, avRed: %i\n", z, x, rgbtRed, avRed)
                     counter ++;
                 }
             }
