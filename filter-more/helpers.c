@@ -90,6 +90,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             tempImage[i][j].rgbtBlue = round(avBlue / counter);
         }
     }
+
+    BYTE h = 500;
+    BYTE k = 800;
+    BYTE w = h + k;
+    printf("%i\n", w);
+
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
