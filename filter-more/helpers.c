@@ -70,9 +70,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             int counter = 0;
 
-            BYTE avRed = 0;
-            BYTE avGreen = 0;
-            BYTE avBlue = 0;
+            int avRed = 0;
+            int avGreen = 0;
+            int avBlue = 0;
 
             for (int z = zMin; z <= zMax; z++)
             {
