@@ -67,7 +67,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 xMax = width - 1;
             }
 
-            int counter = 0;
+            BYTE counter = 0;
 
             BYTE avRed = 0;
             BYTE avGreen = 0;
@@ -83,10 +83,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     counter ++;
                 }
             }
-            tempImage[i][j].rgbtRed = avRed;
-            tempImage[i][j].rgbtGreen = avRed;
-            tempImage[i][j].rgbtRed = avRed;
-
+            tempImage[i][j].rgbtRed = avRed / counter;
+            tempImage[i][j].rgbtGreen = avGreen / counter;
+            tempImage[i][j].rgbtBlue = avBlue / counter;
+        }
+    }
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = tempImage[i][j];
         }
     }
     return;
