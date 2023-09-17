@@ -142,6 +142,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             RGBTRIPLE tempCalcX[3][3];
             RGBTRIPLE tempCalcY[3][3];
+            int GxTempBlue
 
             for (int z = zMin; z <= zMax; z++)
             {
