@@ -165,77 +165,46 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gxBlue += image[z][x].rgbtBlue * -2;
                         printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
-                    else if (x == j)
+                    else if (x > j && z != i)
                     {
-                        tempCalcX[tempZ][tempX].rgbtRed = 0;
-                        tempCalcX[tempZ][tempX].rgbtGreen = 0;
-                        tempCalcX[tempZ][tempX].rgbtBlue = 0;
-                        printf("3image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
-                    }
-                    if (x > j && z != i)
-                    {
-                        tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 1;
-                        tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 1;
-                        tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 1;
+                        gxRed += image[z][x].rgbtRed * 1;
+                        gxGreen += image[z][x].rgbtGreen * 1;
+                        gxBlue += image[z][x].rgbtBlue * 1;
                         printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x > j && z == i)
                     {
-                        tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 2;
-                        tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 2;
-                        tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 2;
+                        gxRed += image[z][x].rgbtRed * 2;
+                        gxGreen += image[z][x].rgbtGreen * 2;
+                        gxBlue += image[z][x].rgbtBlue * 2;
                         printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
 
                     //GyArr
                     if (z < i && x != j)
                     {
-                        tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -1;
-                        tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -1;
-                        tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -1;
+                        gyRed += image[z][x].rgbtRed * -1;
+                        gyGreen += image[z][x].rgbtGreen * -1;
+                        gyBlue += image[z][x].rgbtBlue * -1;
                     }
                     else if (z < i && x == j)
                     {
-                        tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -2;
-                        tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -2;
-                        tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -2;
+                        gyRed += image[z][x].rgbtRed * -2;
+                        gyGreen += image[z][x].rgbtGreen * -2;
+                        gyBlue += image[z][x].rgbtBlue * -2;
                     }
-                    else if (z == i)
+                    else if (z > i && x != j)
                     {
-                        tempCalcY[tempZ][tempX].rgbtRed = 0;
-                        tempCalcY[tempZ][tempX].rgbtGreen = 0;
-                        tempCalcY[tempZ][tempX].rgbtBlue = 0;
-                    }
-                    if (z > i && x != j)
-                    {
-                        tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 1;
-                        tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 1;
-                        tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 1;
+                        gyRed += image[z][x].rgbtRed * 1;
+                        gyGreen += image[z][x].rgbtGreen * 1;
+                        gyBlue += image[z][x].rgbtBlue * 1;
                     }
                     else if (z > i && x == j)
                     {
-                        tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 2;
-                        tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 2;
-                        tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 2;
+                        gyRed += image[z][x].rgbtRed * 2;
+                        gyGreen += image[z][x].rgbtGreen * 2;
+                        gyBlue += image[z][x].rgbtBlue * 2;
                     }
-
-                    tempX ++;
-                }
-
-                tempZ ++;
-            }
-
-            for (int w = 0; w < 3; w++)
-            {
-                for (int q = 0; q < 3; q++)
-                {
-                    gxRed += tempCalcX[w][q].rgbtRed;
-                    gxGreen += tempCalcX[w][q].rgbtGreen;
-                    gxBlue += tempCalcX[w][q].rgbtBlue;
-
-                    gyRed += tempCalcY[w][q].rgbtRed;
-                    gyGreen += tempCalcY[w][q].rgbtGreen;
-                    gyBlue += tempCalcY[w][q].rgbtBlue;
                 }
             }
 
