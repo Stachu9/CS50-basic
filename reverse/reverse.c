@@ -60,11 +60,15 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-    
+
     BYTE block[blockSize];
 
     while(ftell(inptr) - blockSize > sizeof(wf))
     {
+        if(fseek(inptr, -2 * blockSize, SEEK_CUR))
+        {
+            return 1;
+        }
         fread(block, blockSize, 1, inptr);
         fwrite(block, blockSize, 1 intpr);
     }
