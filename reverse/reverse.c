@@ -60,12 +60,7 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     BYTE block[blockSize];
 
-    typedef struct
-{
-    BYTE   block[blockSize];
 
-}
-BLOCKARR;
 
     for (int i = 0; i < numSamples; i++)
     {
