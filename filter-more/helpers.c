@@ -142,6 +142,21 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             RGBTRIPLE tempCalcX[3][3];
             RGBTRIPLE tempCalcY[3][3];
+
+            for (int k = 0; k < 3; k++)
+            {
+                for (int l = 0; l < 3; l++)
+                {
+                    tempCalcX[k][l].rgbtRed = 0;
+                    tempCalcX[k][l].rgbtGreen = 0;
+                    tempCalcX[k][l].rgbtBlue = 0;
+
+                    tempCalcY[k][l].rgbtRed = 0;
+                    tempCalcY[k][l].rgbtGreen = 0;
+                    tempCalcY[k][l].rgbtBlue = 0;
+                }
+            }
+
             int gxTempRed = 0;
             int gxTempGreen = 0;
             int gxTempBlue = 0;
