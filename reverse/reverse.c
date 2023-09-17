@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     }
 
     // Write header to file
-    fwrite(&wf, sizeof(WAVEHEADER), 1, outptr);
+    fwrite(&wf, sizeof(wf), 1, outptr);
 
     // Use get_block_size to calculate size of block
     // TODO #7
