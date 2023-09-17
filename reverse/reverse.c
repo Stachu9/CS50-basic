@@ -34,8 +34,10 @@ int main(int argc, char *argv[])
     {
         if (wf.format[i] != WAVE[i])
         {
-            
+            printf("Wrong file format!");
+            return 1;
         }
+        printf("dupa");
     }
 
 
