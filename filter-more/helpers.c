@@ -153,16 +153,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     //GxArr
                     if (x < j && z != i)
                     {
-                        tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -1;
-                        tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -1;
-                        tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -1;
+                        gxRed += image[z][x].rgbtRed * -1;
+                        gxGreen += image[z][x].rgbtGreen * -1;
+                        gxBlue += image[z][x].rgbtBlue * -1;
                         printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x < j && z == i)
                     {
-                        tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -2;
-                        tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -2;
-                        tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -2;
+                        gxRed += image[z][x].rgbtRed * -2;
+                        gxGreen += image[z][x].rgbtGreen * -2;
+                        gxBlue += image[z][x].rgbtBlue * -2;
                         printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x == j)
