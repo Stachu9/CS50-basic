@@ -4,7 +4,7 @@
 
 #include "wav.h"
 
-int check_format(WAVHEADER header);
+bool check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 
 int main(int argc, char *argv[])
@@ -29,15 +29,11 @@ int main(int argc, char *argv[])
     fread(&wf, sizeof(WAVHEADER), 1, inptr);
 
     // Use check_format to ensure WAV format
-    char* WAVE = "WAVE";
-    for (int i = 0; i < 4; i++)
-    {
-        if (wf.format[i] != WAVE[i])
-        {
-            printf("Wrong file format!");
-            return 1;
-        }
-    }
+    if (!check_format(wf))
+    (
+        printf("Wrong format!");
+        return 1;
+    )
 
 
     // Open output file for writing
@@ -62,11 +58,10 @@ bool check_format(WAVHEADER header)
     {
         if (wf.format[i] != WAVE[i])
         {
-            printf("Wrong file format!");
-            return 1;
+            return false;
         }
     }
-    return 0;
+    return true;
 }
 
 int get_block_size(WAVHEADER header)
