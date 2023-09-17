@@ -6,7 +6,7 @@
 
 #include "wav.h"
 
-bool check_format(WAVHEADER header);
+int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 int num_samples(WAVHEADER header);
 
@@ -75,17 +75,17 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-bool check_format(WAVHEADER header)
+int check_format(WAVHEADER header)
 {
     char* WAVE = "WAVE";
     for (int i = 0; i < 4; i++)
     {
         if (header.format[i] != WAVE[i])
         {
-            return false;
+            return 0;
         }
     }
-    return true;
+    return 1;
 }
 
 int get_block_size(WAVHEADER header)
