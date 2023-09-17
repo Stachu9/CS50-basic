@@ -156,28 +156,24 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gxRed += image[z][x].rgbtRed * -1;
                         gxGreen += image[z][x].rgbtGreen * -1;
                         gxBlue += image[z][x].rgbtBlue * -1;
-                        //printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x < j && z == i)
                     {
                         gxRed += image[z][x].rgbtRed * -2;
                         gxGreen += image[z][x].rgbtGreen * -2;
                         gxBlue += image[z][x].rgbtBlue * -2;
-                        //printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x > j && z != i)
                     {
                         gxRed += image[z][x].rgbtRed * 1;
                         gxGreen += image[z][x].rgbtGreen * 1;
                         gxBlue += image[z][x].rgbtBlue * 1;
-                        //printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x > j && z == i)
                     {
                         gxRed += image[z][x].rgbtRed * 2;
                         gxGreen += image[z][x].rgbtGreen * 2;
                         gxBlue += image[z][x].rgbtBlue * 2;
-                        //printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
 
                     //GyArr
@@ -186,28 +182,24 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gyRed += image[z][x].rgbtRed * -1;
                         gyGreen += image[z][x].rgbtGreen * -1;
                         gyBlue += image[z][x].rgbtBlue * -1;
-                        //printf("11image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                     else if (z < i && x == j)
                     {
                         gyRed += image[z][x].rgbtRed * -2;
                         gyGreen += image[z][x].rgbtGreen * -2;
                         gyBlue += image[z][x].rgbtBlue * -2;
-                        //printf("22image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                     else if (z > i && x != j)
                     {
                         gyRed += image[z][x].rgbtRed * 1;
                         gyGreen += image[z][x].rgbtGreen * 1;
                         gyBlue += image[z][x].rgbtBlue * 1;
-                        //printf("33image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                     else if (z > i && x == j)
                     {
                         gyRed += image[z][x].rgbtRed * 2;
                         gyGreen += image[z][x].rgbtGreen * 2;
                         gyBlue += image[z][x].rgbtBlue * 2;
-                        //printf("44image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                 }
             }
@@ -234,7 +226,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             tempImage[i][j].rgbtRed = tempR;
             tempImage[i][j].rgbtGreen = tempG;
             tempImage[i][j].rgbtBlue = tempB;
-            //printf("tempImage: %i\n", tempImage[i][j].rgbtBlue);
         }
     }
 
