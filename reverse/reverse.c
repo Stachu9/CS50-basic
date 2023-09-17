@@ -57,7 +57,15 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    // TODO #4
+    char* WAVE = "WAVE";
+    for (int i = 0; i < 4; i++)
+    {
+        if (wf.format[i] != WAVE[i])
+        {
+            printf("Wrong file format!");
+            return 1;
+        }
+    }
     return 0;
 }
 
