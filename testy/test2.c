@@ -6,9 +6,9 @@
 
 int main(void)
 {
-    int avarage = round((27 + 28 + 28)/3);
+    float avarage = round((27.0 + 28.0 + 28.0)/3.0);
 
-    printf("%i\n", avarage);
+    printf("%f\n", avarage);
 
     return 0;
 }
