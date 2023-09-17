@@ -54,27 +54,19 @@ int main(int argc, char *argv[])
 
     // Use get_block_size to calculate size of block
     int blockSize = get_block_size(wf);
-    int numSamples = num_samples(wf);
-
 
     // Write reversed audio to file
     BYTE block[blockSize];
 
-
-
-    for (int i = 0; i < numSamples; i++)
+    while(ftell(inptr) - blockSize > sizeof(wf))
     {
-        fread(block, sizeof(block), 1, inptr);
-        temp[numSamples - 1 - i] = *block;
+        
     }
-
-
 
 
     fclose(inptr);
     fclose(outptr);
-    free(block);
-    free(temp);
+
     return 0;
 }
 
