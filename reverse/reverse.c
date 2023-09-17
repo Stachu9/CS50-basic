@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < numSamples; i++)
     {
         fread(&block, sizeof(block), 1, inptr);
-        temp[numSamples - 1 - i] = block;
+        temp[numSamples - 1 - i] = *block;
     }
 
 
