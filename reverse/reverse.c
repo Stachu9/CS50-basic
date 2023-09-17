@@ -76,3 +76,8 @@ int get_block_size(WAVHEADER header)
 {
     return ceil(header.numChannels * header.bitsPerSample / 8.0);
 }
+
+int num_samples(WAVHEADER header)
+{
+    return 
+}
