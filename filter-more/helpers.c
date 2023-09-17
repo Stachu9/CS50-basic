@@ -191,25 +191,25 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -1;
                         tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -1;
                     }
-                    else if (x < j && z == i)
+                    else if (z < i && x == j)
                     {
                         tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -2;
                         tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -2;
                         tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -2;
                     }
-                    else if (x == j)
+                    else if (z == i)
                     {
                         tempCalcY[tempZ][tempX].rgbtRed = 0;
                         tempCalcY[tempZ][tempX].rgbtGreen = 0;
                         tempCalcY[tempZ][tempX].rgbtBlue = 0;
                     }
-                    if (x > j && z != i)
+                    if (z > i && x != j)
                     {
                         tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 1;
                         tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 1;
                         tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 1;
                     }
-                    else if (x > j && z == i)
+                    else if (z > i && x == j)
                     {
                         tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 2;
                         tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 2;
