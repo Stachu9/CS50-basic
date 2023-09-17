@@ -185,7 +185,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
 
                     //GyArr
-                    if (Z < j && z != i)
+                    if (z < i && x != j)
                     {
                         tempCalcY[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -1;
                         tempCalcY[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -1;
