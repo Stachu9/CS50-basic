@@ -105,6 +105,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempImage[height][width];
+    RGBTRIPLE tempCalcX[3][3];
+    RGBTRIPLE tempCalcY[3][3];
 
     for (int i = 0; i < height; i++)
     {
@@ -147,7 +149,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     //Gx
                     if (x < j)
                     {
-                        
+
                     }
                     avRed += image[z][x].rgbtRed;
                     avGreen += image[z][x].rgbtGreen;
