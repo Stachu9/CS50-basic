@@ -59,7 +59,14 @@ int main(int argc, char *argv[])
     int* block = malloc(blockSize);
     int* temp = malloc(numSamples * sizeof(block));
 
-    
+    for (int i = 0; i < numSamples; i++)
+    {
+        fread(&block, sizeof(block), 1, inptr);
+        temp[numSamples - 1 - i] = block;
+    }
+
+
+
 
     fclose(inptr);
     fclose(outptr);
