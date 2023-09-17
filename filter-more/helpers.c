@@ -106,14 +106,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempImage[height][width];
 
+
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            int tempZ = 0;
+            int tempX = 0;
+
             int zMin = i - 1;
             if (zMin < 0)
             {
                 zMin = 0;
+                tempZ = 1;
             }
 
             int zMax = i + 1;
@@ -126,6 +132,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             if (xMin < 0)
             {
                 xMin = 0;
+                tempX = 1;
             }
 
             int xMax = j + 1;
@@ -165,8 +172,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int gyGreen = 0;
             int gyBlue = 0;
 
-            int tempZ = 0;
-            int tempX = 0;
 
             for (int z = zMin; z <= zMax; z++)
             {
