@@ -60,7 +60,8 @@ int main(int argc, char *argv[])
 
     while(ftell(inptr) - blockSize > sizeof(wf))
     {
-        fread(block, size)
+        fread(block, blockSize, 1, inptr);
+        fwrite(block, blockSize, 1 intpr);
     }
 
 
