@@ -145,7 +145,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 for (int x = xMin; x <= xMax; x++)
                 {
                     //Gx
-                    if ()
+                    if (x < j)
+                    {
+                        
+                    }
                     avRed += image[z][x].rgbtRed;
                     avGreen += image[z][x].rgbtGreen;
                     avBlue += image[z][x].rgbtBlue;
