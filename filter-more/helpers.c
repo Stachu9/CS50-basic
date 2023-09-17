@@ -112,14 +112,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < 1; j++)
         {
-            int tempZ = 0;
-            int tempX = 0;
 
             int zMin = i - 1;
             if (zMin < 0)
             {
                 zMin = 0;
-                tempZ = 1;
             }
 
             int zMax = i + 1;
@@ -132,36 +129,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             if (xMin < 0)
             {
                 xMin = 0;
-                tempX = 1;
             }
 
             int xMax = j + 1;
             if (xMax >= width)
             {
                 xMax = width - 1;
-            }
-
-            int counter = 0;
-
-            int avRed = 0;
-            int avGreen = 0;
-            int avBlue = 0;
-
-            RGBTRIPLE tempCalcX[3][3];
-            RGBTRIPLE tempCalcY[3][3];
-
-            for (int k = 0; k < 3; k++)
-            {
-                for (int l = 0; l < 3; l++)
-                {
-                    tempCalcX[k][l].rgbtRed = 0;
-                    tempCalcX[k][l].rgbtGreen = 0;
-                    tempCalcX[k][l].rgbtBlue = 0;
-
-                    tempCalcY[k][l].rgbtRed = 0;
-                    tempCalcY[k][l].rgbtGreen = 0;
-                    tempCalcY[k][l].rgbtBlue = 0;
-                }
             }
 
             int gxRed = 0;
