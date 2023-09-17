@@ -142,7 +142,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             RGBTRIPLE tempCalcX[3][3];
             RGBTRIPLE tempCalcY[3][3];
-            int GxTempBlue
+            int gxTempRed = 0;
+            int gxTempGreen = 0;
+            int gxTempBlue = 0;
 
             for (int z = zMin; z <= zMax; z++)
             {
@@ -179,7 +181,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempCalcX[z][x].rgbtGreen = image[z][x].rgbtGreen * 2;
                         tempCalcX[z][x].rgbtBlue = image[z][x].rgbtBlue * 2;
                     }
+
+                    
             }
+
             tempImage[i][j].rgbtRed = round(avRed / counter);
             tempImage[i][j].rgbtGreen = round(avGreen / counter);
             tempImage[i][j].rgbtBlue = round(avBlue / counter);
