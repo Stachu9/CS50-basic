@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     // TODO #8
 
     int* block = malloc(blockSize);
-    int* temp = malloc
+    int* temp = malloc()
 
     fclose(inptr);
     fclose(outptr);
