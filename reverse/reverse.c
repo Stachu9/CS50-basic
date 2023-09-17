@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
     }
 
     // Open input file for reading
-    FILE *inptr = fopen(argv[1], "r");
+    char* infile = argv[1];
+    FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
         printf("Could not open %s.\n", argv[1]);
@@ -40,7 +41,8 @@ int main(int argc, char *argv[])
 
 
     // Open output file for writing
-    FILE *outptr = fopen(argv[2], "w");
+    char* outfile = argv[2];
+    FILE *outptr = fopen(outfile, "w");
     if (outptr == NULL)
     {
         printf("Could not open %s.\n", argv[2]);
