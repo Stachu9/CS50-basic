@@ -52,6 +52,9 @@ int main(int argc, char *argv[])
 
     // Use get_block_size to calculate size of block
     int blockSize = get_block_size(wf);
+    int numSamples = num_samples(wf);
+
+    
 
     // Write reversed audio to file
     // TODO #8
