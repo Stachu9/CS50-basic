@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     }
 
     // Read header
-    WAVHEADER bwf;
+    WAVHEADER wf;
     fread(&wf, sizeof(WAVHEADER), 1, inptr);
 
     // Use check_format to ensure WAV format
