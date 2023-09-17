@@ -29,7 +29,11 @@ int main(int argc, char *argv[])
     fread(&wf, sizeof(WAVHEADER), 1, inptr);
 
     // Use check_format to ensure WAV format
-    // TODO #4
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%i", WAVHEADER.format[i]);
+    }
+
 
     // Open output file for writing
     // TODO #5
@@ -42,6 +46,8 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+    fclose(argv[1]);
+    return 0;
 }
 
 int check_format(WAVHEADER header)
