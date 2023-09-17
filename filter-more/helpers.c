@@ -183,31 +183,35 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -1;
                         tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -1;
                         tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -1;
-                        printf("image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
+                        printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x < j && z == i)
                     {
                         tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -2;
                         tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -2;
                         tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -2;
+                        printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x == j)
                     {
                         tempCalcX[tempZ][tempX].rgbtRed = 0;
                         tempCalcX[tempZ][tempX].rgbtGreen = 0;
                         tempCalcX[tempZ][tempX].rgbtBlue = 0;
+                        printf("3image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     if (x > j && z != i)
                     {
                         tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 1;
                         tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 1;
                         tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 1;
+                        printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x > j && z == i)
                     {
                         tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * 2;
                         tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * 2;
                         tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 2;
+                        printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
 
                     //GyArr
