@@ -237,6 +237,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 tempZ ++;
             }
 
+            for (int w = 0; w < 3; w++)
+            {
+                for (int q = 0; q < 3; q++)
+                {
+                    
+                }
+            }
+
             tempImage[i][j].rgbtRed = round(avRed / counter);
             tempImage[i][j].rgbtGreen = round(avGreen / counter);
             tempImage[i][j].rgbtBlue = round(avBlue / counter);
