@@ -236,7 +236,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempCalcY[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * 2;
                     }
 
-                    tempX ++
+                    tempX ++;
                 }
 
                 tempZ ++;
