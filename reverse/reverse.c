@@ -56,6 +56,11 @@ int main(int argc, char *argv[])
     int blockSize = get_block_size(wf);
 
     // Write reversed audio to file
+    if (fseek(inptr, blockSize, SEEK_END))
+    {
+        return 1;
+    }
+    
     BYTE block[blockSize];
 
     while(ftell(inptr) - blockSize > sizeof(wf))
