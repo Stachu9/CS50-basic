@@ -21,7 +21,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    int halfWidth = floor(width/2);
+    int halfWidth = floor(width / 2);
 
     for (int i = 0; i < height; i++)
     {
@@ -81,8 +81,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     avRed += image[z][x].rgbtRed;
                     avGreen += image[z][x].rgbtGreen;
                     avBlue += image[z][x].rgbtBlue;
-                    counter ++;
-                    //printf("coordinates: %i, %i. Blue: %i, avBlue: %i, Counter: %i\n", z, x, image[z][x].rgbtBlue, avBlue, counter);
+                    counter++;
                 }
             }
             tempImage[i][j].rgbtRed = round(avRed / counter);
@@ -105,8 +104,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempImage[height][width];
-
-
 
     for (int i = 0; i < height; i++)
     {
@@ -145,12 +142,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int gyGreen = 0;
             int gyBlue = 0;
 
-
             for (int z = zMin; z <= zMax; z++)
             {
                 for (int x = xMin; x <= xMax; x++)
                 {
-                    //GxArr
+                    // GxArr
                     if (x < j && z != i)
                     {
                         gxRed += image[z][x].rgbtRed * -1;
@@ -176,7 +172,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gxBlue += image[z][x].rgbtBlue * 2;
                     }
 
-                    //GyArr
+                    // GyArr
                     if (z < i && x != j)
                     {
                         gyRed += image[z][x].rgbtRed * -1;
@@ -204,9 +200,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            int tempR = round(sqrt((gxRed * gxRed*1.0) + (gyRed * gyRed*1.0)));
-            int tempG = round(sqrt((gxGreen * gxGreen*1.0) + (gyGreen * gyGreen*1.0)));
-            int tempB = round(sqrt((gxBlue * gxBlue*1.0) + (gyBlue * gyBlue*1.0)));
+            int tempR = round(sqrt((gxRed * gxRed * 1.0) + (gyRed * gyRed * 1.0)));
+            int tempG = round(sqrt((gxGreen * gxGreen * 1.0) + (gyGreen * gyGreen * 1.0)));
+            int tempB = round(sqrt((gxBlue * gxBlue * 1.0) + (gyBlue * gyBlue * 1.0)));
 
             if (tempR > 255)
             {
