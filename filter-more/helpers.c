@@ -108,9 +108,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < 1; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < 1; j++)
         {
             int tempZ = 0;
             int tempX = 0;
@@ -183,6 +183,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempCalcX[tempZ][tempX].rgbtRed = image[z][x].rgbtRed * -1;
                         tempCalcX[tempZ][tempX].rgbtGreen = image[z][x].rgbtGreen * -1;
                         tempCalcX[tempZ][tempX].rgbtBlue = image[z][x].rgbtBlue * -1;
+                        printf("image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
                     }
                     else if (x < j && z == i)
                     {
