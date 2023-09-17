@@ -8,6 +8,7 @@
 
 bool check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
+int num_samples(WAVHEADER header);
 
 int main(int argc, char *argv[])
 {
@@ -74,10 +75,10 @@ bool check_format(WAVHEADER header)
 
 int get_block_size(WAVHEADER header)
 {
-    return ceil(header.numChannels * header.bitsPerSample / 8.0);
+    return header.numChannels * header.bitsPerSample / 8;
 }
 
 int num_samples(WAVHEADER header)
 {
-    return 
+    return (header.subChunk2Size / numChannels) / (bitsPerSample / 8);
 }
