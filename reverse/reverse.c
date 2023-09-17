@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
             return 1;
         }
         fread(block, blockSize, 1, inptr);
-        fwrite(block, blockSize, 1, inptr);
+        fwrite(block, blockSize, 1, outptr);
     }
 
 
