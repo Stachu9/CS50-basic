@@ -108,9 +108,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < 1; j++)
+        for (int j = 0; j < width; j++)
         {
 
             int zMin = i - 1;
@@ -156,28 +156,28 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gxRed += image[z][x].rgbtRed * -1;
                         gxGreen += image[z][x].rgbtGreen * -1;
                         gxBlue += image[z][x].rgbtBlue * -1;
-                        printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
+                        //printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x < j && z == i)
                     {
                         gxRed += image[z][x].rgbtRed * -2;
                         gxGreen += image[z][x].rgbtGreen * -2;
                         gxBlue += image[z][x].rgbtBlue * -2;
-                        printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
+                        //printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x > j && z != i)
                     {
                         gxRed += image[z][x].rgbtRed * 1;
                         gxGreen += image[z][x].rgbtGreen * 1;
                         gxBlue += image[z][x].rgbtBlue * 1;
-                        printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
+                        //printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x > j && z == i)
                     {
                         gxRed += image[z][x].rgbtRed * 2;
                         gxGreen += image[z][x].rgbtGreen * 2;
                         gxBlue += image[z][x].rgbtBlue * 2;
-                        printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
+                        //printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
 
                     //GyArr
@@ -186,28 +186,28 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gyRed += image[z][x].rgbtRed * -1;
                         gyGreen += image[z][x].rgbtGreen * -1;
                         gyBlue += image[z][x].rgbtBlue * -1;
-                        printf("11image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
+                        //printf("11image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                     else if (z < i && x == j)
                     {
                         gyRed += image[z][x].rgbtRed * -2;
                         gyGreen += image[z][x].rgbtGreen * -2;
                         gyBlue += image[z][x].rgbtBlue * -2;
-                        printf("22image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
+                        //printf("22image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                     else if (z > i && x != j)
                     {
                         gyRed += image[z][x].rgbtRed * 1;
                         gyGreen += image[z][x].rgbtGreen * 1;
                         gyBlue += image[z][x].rgbtBlue * 1;
-                        printf("33image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
+                        //printf("33image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                     else if (z > i && x == j)
                     {
                         gyRed += image[z][x].rgbtRed * 2;
                         gyGreen += image[z][x].rgbtGreen * 2;
                         gyBlue += image[z][x].rgbtBlue * 2;
-                        printf("44image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
+                        //printf("44image: %i, temp: %i\n", image[z][x].rgbtBlue, gyBlue);
                     }
                 }
             }
@@ -215,7 +215,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             tempImage[i][j].rgbtRed = round(sqrt((gxRed * gxRed) + (gyRed * gyRed)));
             tempImage[i][j].rgbtGreen = round(sqrt((gxGreen * gxGreen) + (gyGreen * gyGreen)));
             tempImage[i][j].rgbtBlue = round(sqrt((gxBlue * gxBlue) + (gyBlue * gyBlue)));
-            printf("tempImage: %i\n", tempImage[i][j].rgbtBlue);
+            //printf("tempImage: %i\n", tempImage[i][j].rgbtBlue);
         }
     }
 
