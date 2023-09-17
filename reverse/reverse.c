@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
             printf("Wrong file format!");
             return 1;
         }
-        printf("dupa");
     }
 
 
