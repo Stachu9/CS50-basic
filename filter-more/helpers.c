@@ -68,7 +68,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 xMax = width - 1;
             }
 
-            int counter = 0;
+            float counter = 0.0;
 
             int avRed = 0;
             int avGreen = 0;
