@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 
     while(ftell(inptr) - blockSize > sizeof(wf))
     {
-        
+        fread(block, size)
     }
 
 
