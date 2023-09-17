@@ -59,10 +59,12 @@ int main(int argc, char *argv[])
     // TODO #8
 
     int* block = malloc(blockSize);
-    int* temp = malloc()
+    int* temp = malloc(numSamples * sizeof(block));
 
     fclose(inptr);
     fclose(outptr);
+    free(block);
+    free(temp);
     return 0;
 }
 
@@ -86,5 +88,5 @@ int get_block_size(WAVHEADER header)
 
 int num_samples(WAVHEADER header)
 {
-    return (header.subChunk2Size / numChannels) / (bitsPerSample / 8);
+    return (header.subchunk2Size / numChannels) / (bitsPerSample / 8);
 }
