@@ -31,10 +31,11 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     if (!check_format(wf))
-    (
+    {
         printf("Wrong format!");
         return 1;
-    )
+    }
+
 
 
     // Open output file for writing
@@ -57,7 +58,7 @@ bool check_format(WAVHEADER header)
     char* WAVE = "WAVE";
     for (int i = 0; i < 4; i++)
     {
-        if (wf.format[i] != WAVE[i])
+        if (header.format[i] != WAVE[i])
         {
             return false;
         }
