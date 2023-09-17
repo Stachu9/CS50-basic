@@ -148,9 +148,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 for (int x = xMin; x <= xMax; x++)
                 {
                     //GxArr
-                    if (x < j)
+                    if (x < j && z != i)
                     {
-                        tempCalcX[z][x].rgbtRed =
+                        tempCalcX[z][x].rgbtRed = image[z][x].rgbtRed * -1;
+                        tempCalcX[z][x].rgbtGreen = image[z][x].rgbtGreen * -1;
+                        tempCalcX[z][x].rgbtBlue = image[z][x].rgbtBlue * -1;
                     }
                     avRed += image[z][x].rgbtRed;
                     avGreen += image[z][x].rgbtGreen;
