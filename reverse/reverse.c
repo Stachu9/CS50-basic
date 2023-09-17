@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // Use check_format to ensure WAV format
     for (int i = 0; i < 4; i++)
     {
-        printf("%i", WAVHEADER.format[i]);
+        printf("%i\n", wf.format[i]);
     }
 
 
