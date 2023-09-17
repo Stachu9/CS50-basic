@@ -154,11 +154,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempCalcX[z][x].rgbtGreen = image[z][x].rgbtGreen * -1;
                         tempCalcX[z][x].rgbtBlue = image[z][x].rgbtBlue * -1;
                     }
-                    avRed += image[z][x].rgbtRed;
-                    avGreen += image[z][x].rgbtGreen;
-                    avBlue += image[z][x].rgbtBlue;
-                    counter ++;
-                    //printf("coordinates: %i, %i. Blue: %i, avBlue: %i, Counter: %i\n", z, x, image[z][x].rgbtBlue, avBlue, counter);
+                    else if (x < j && z == i)
+                    {
+                        tempCalcX[z][x].rgbtRed = image[z][x].rgbtRed * -2;
+                        tempCalcX[z][x].rgbtGreen = image[z][x].rgbtGreen * -2;
+                        tempCalcX[z][x].rgbtBlue = image[z][x].rgbtBlue * -2;
+                    }
+                    else if (x == j)
+                    {
+                        tempCalcX[z][x].rgbtRed = image[z][x].rgbtRed * -2;
+                        tempCalcX[z][x].rgbtGreen = image[z][x].rgbtGreen * -2;
+                        tempCalcX[z][x].rgbtBlue = image[z][x].rgbtBlue * -2;
                 }
             }
             tempImage[i][j].rgbtRed = round(avRed / counter);
