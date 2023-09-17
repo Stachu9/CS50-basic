@@ -29,9 +29,13 @@ int main(int argc, char *argv[])
     fread(&wf, sizeof(WAVHEADER), 1, inptr);
 
     // Use check_format to ensure WAV format
+    char* WAVE = "WAVE";
     for (int i = 0; i < 4; i++)
     {
-        printf("%i\n", wf.format[i]);
+        if (wf.format[i] != WAVE[i])
+        {
+            
+        }
     }
 
 
