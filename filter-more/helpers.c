@@ -156,28 +156,28 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gxRed += image[z][x].rgbtRed * -1;
                         gxGreen += image[z][x].rgbtGreen * -1;
                         gxBlue += image[z][x].rgbtBlue * -1;
-                        printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
+                        printf("1image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x < j && z == i)
                     {
                         gxRed += image[z][x].rgbtRed * -2;
                         gxGreen += image[z][x].rgbtGreen * -2;
                         gxBlue += image[z][x].rgbtBlue * -2;
-                        printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
+                        printf("2image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x > j && z != i)
                     {
                         gxRed += image[z][x].rgbtRed * 1;
                         gxGreen += image[z][x].rgbtGreen * 1;
                         gxBlue += image[z][x].rgbtBlue * 1;
-                        printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
+                        printf("4image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
                     else if (x > j && z == i)
                     {
                         gxRed += image[z][x].rgbtRed * 2;
                         gxGreen += image[z][x].rgbtGreen * 2;
                         gxBlue += image[z][x].rgbtBlue * 2;
-                        printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, tempCalcX[tempZ][tempX].rgbtBlue);
+                        printf("5image: %i, temp: %i\n", image[z][x].rgbtBlue, gxBlue);
                     }
 
                     //GyArr
