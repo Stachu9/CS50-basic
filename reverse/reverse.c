@@ -1,8 +1,8 @@
+#include <cs50.h>
+#include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <cs50.h>
-#include <math.h>
 
 #include "wav.h"
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
     // Open input file for reading
-    char* infile = argv[1];
+    char *infile = argv[1];
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
@@ -39,9 +39,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
     // Open output file for writing
-    char* outfile = argv[2];
+    char *outfile = argv[2];
     FILE *outptr = fopen(outfile, "w");
     if (outptr == NULL)
     {
@@ -63,16 +62,15 @@ int main(int argc, char *argv[])
 
     BYTE block[blockSize];
 
-    while(ftell(inptr) - blockSize > sizeof(wf))
+    while (ftell(inptr) - blockSize > sizeof(wf))
     {
-        if(fseek(inptr, -2 * blockSize, SEEK_CUR))
+        if (fseek(inptr, -2 * blockSize, SEEK_CUR))
         {
             return 1;
         }
         fread(block, blockSize, 1, inptr);
         fwrite(block, blockSize, 1, outptr);
     }
-
 
     fclose(inptr);
     fclose(outptr);
@@ -82,7 +80,7 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    char* WAVE = "WAVE";
+    char *WAVE = "WAVE";
     for (int i = 0; i < 4; i++)
     {
         if (header.format[i] != WAVE[i])
