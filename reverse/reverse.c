@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-int check_format(WAVHEADER header)
+bool check_format(WAVHEADER header)
 {
     char* WAVE = "WAVE";
     for (int i = 0; i < 4; i++)
