@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cs50.h>
+#include <math.h>
 
 #include "wav.h"
 
@@ -73,6 +74,5 @@ bool check_format(WAVHEADER header)
 
 int get_block_size(WAVHEADER header)
 {
-    // TODO #7
-    return roundheader.numChannels * header.bitsPerSample / 8.0;
+    return ceil(header.numChannels * header.bitsPerSample / 8.0);
 }
