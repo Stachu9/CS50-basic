@@ -101,7 +101,7 @@ bool unload(void)
 
         while (cursor != NULL)
         {
-            temp = cursor;
+            temp = cursor->next;
             free(cursor);
             cursor = temp;
         }
