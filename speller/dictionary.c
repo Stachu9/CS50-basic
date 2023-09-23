@@ -38,18 +38,21 @@ bool load(const char *dictionary)
 {
     // TODO
     char tempword[LENGTH + 1];
+
     FILE *file = fopen(dictionary, "r");
 
     if (file == NULL)
     {
-        printf("Could not open %s.\n", text);
+        printf("Could not open %s.\n", dictionary);
         return 1;
     }
 
     while (fscan(file, "%s", tempword) != EOF)
     {
         node *n = malloc(sizeof(node));
-        n->word =
+        n->word = tempword;
+        n->next = NULL;
+        table
     }
     return false;
 }
