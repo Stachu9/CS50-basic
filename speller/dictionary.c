@@ -48,7 +48,19 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    if (word[1] == '\0')
+    {
+        return toupper(word[0]) - 'A';
+    }
+    else if (word[2] == '\0')
+    {
+        return (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A');
+    }
+    else
+    {
+        return (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A') * (toupper(word[2]) - 'A');
+    }
+
 }
 
 // Loads dictionary into memory, returning true if successful, else false
