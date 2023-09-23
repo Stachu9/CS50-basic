@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     {
         node *n = malloc(sizeof(node));
         n->word = tempword;
-        n->next = NULL;
+        n->next = table[hash(tempword)];
         table[hash(tempword)] = n
     }
     return false;
