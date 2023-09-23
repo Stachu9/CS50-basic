@@ -28,6 +28,7 @@ int wordCounter = 0;
 bool check(const char *word)
 {
     // TODO
+    
     return false;
 }
 
