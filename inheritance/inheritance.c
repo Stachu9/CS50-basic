@@ -40,7 +40,6 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
-    person *p = NULL;
     person *n = malloc(sizeof(person));
 
     // If there are still generations left to create
@@ -74,7 +73,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return n;
 }
 
 // Free `p` and all ancestors of `p`.
