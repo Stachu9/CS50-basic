@@ -79,6 +79,8 @@ bool load(const char *dictionary)
         table[hash(tempword)] = n;
         wordCounter++;
     }
+    
+    fclose(file);
 
     return true;
 }
