@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -57,7 +58,7 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", tempword) != EOF)
     {
         node *n = malloc(sizeof(node));
-        n->word = tempword;
+        strcpy(n->word, tempword);
         n->next = table[hash(tempword)];
         table[hash(tempword)] = n;
     }
