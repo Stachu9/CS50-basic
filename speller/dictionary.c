@@ -54,11 +54,11 @@ unsigned int hash(const char *word)
     }
     else if (word[2] == '\0')
     {
-        return (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A');
+        return ((toupper(word[0]) - 'A') * (toupper(word[1]) - 'A'));
     }
     else
     {
-        return (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A') * (toupper(word[2]) - 'A');
+        return ((toupper(word[0]) - 'A') * (toupper(word[1]) - 'A') * (toupper(word[2]) - 'A'));
     }
 
 }
