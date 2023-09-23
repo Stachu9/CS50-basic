@@ -39,7 +39,7 @@ bool load(const char *dictionary)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        table = NULL;
+        table[i] = NULL;
     }
 
     char tempword[LENGTH + 1];
