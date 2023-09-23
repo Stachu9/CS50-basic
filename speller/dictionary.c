@@ -28,7 +28,8 @@ int wordCounter = 0;
 bool check(const char *word)
 {
     // TODO
-    
+    node *cursor = table[hash(word)];
+    while ()
     return false;
 }
 
