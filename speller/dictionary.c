@@ -37,6 +37,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    for (int i = 0, i < N, i++)
+    {
+        table = NULL;
+    }
+
     char tempword[LENGTH + 1];
 
     FILE *file = fopen(dictionary, "r");
@@ -44,7 +49,7 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Could not open %s.\n", dictionary);
-        return 1;
+        return false;
     }
 
     while (fscan(file, "%s", tempword) != EOF)
@@ -54,7 +59,8 @@ bool load(const char *dictionary)
         n->next = table[hash(tempword)];
         table[hash(tempword)] = n
     }
-    return false;
+
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
