@@ -106,5 +106,5 @@ bool unload(void)
             cursor = temp;
         }
     }
-    return false;
+    return true;
 }
