@@ -29,7 +29,14 @@ bool check(const char *word)
 {
     // TODO
     node *cursor = table[hash(word)];
-    while ()
+    while (true)
+    {
+        if (cursor == NULL)
+        {
+            return false;
+        }
+        if ()
+    }
     return false;
 }
 
