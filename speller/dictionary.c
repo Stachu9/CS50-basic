@@ -22,6 +22,8 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+int wordCounter = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -61,6 +63,7 @@ bool load(const char *dictionary)
         strcpy(n->word, tempword);
         n->next = table[hash(tempword)];
         table[hash(tempword)] = n;
+        wordCounter++;
     }
 
     return true;
