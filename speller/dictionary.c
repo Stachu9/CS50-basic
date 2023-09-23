@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -53,7 +54,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while (fscan(file, "%s", tempword) != EOF)
+    while (fscanf(file, "%s", tempword) != EOF)
     {
         node *n = malloc(sizeof(node));
         n->word = tempword;
