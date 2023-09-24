@@ -63,7 +63,7 @@ def simulate_tournament(teams):
     if len(tempList > 1):
         simulate_round(tempList)
 
-
+    return tempList[0]['name']
 
 if __name__ == "__main__":
     main()
