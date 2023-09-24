@@ -22,7 +22,7 @@ def main():
     counter = 0
     for team in file_reader:
         teams += [team]
-        teams[counter].rating = int
+        teams[counter].rating = int(teams[counter].rating)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
