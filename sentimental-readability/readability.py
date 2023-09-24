@@ -4,7 +4,7 @@ while not text:
     text = input("Text: ")
 
 sentences = 0
-words = 0
+words = 1
 letters = 0
 for c in text:
     if c == "." or c == "!" or c == "?":
