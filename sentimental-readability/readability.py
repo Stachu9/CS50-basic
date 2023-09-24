@@ -14,7 +14,7 @@ for c in text:
     elif c.isalpha():
         letters += 1
 
-index = 0.0588 * (100 * letters / words) - 0.296 * (100 * sentences / words) - 15,8
+index = 0.0588 * (100.0 * letters / words) - 0.296 * (100.0 * sentences / words) - 15.8
 
 if index < 1:
     print("Before Grade 1")
