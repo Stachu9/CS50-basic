@@ -33,11 +33,13 @@ def main():
         except:
             break
 
-    if not ((sumOnce + sumTwice) % 10 == 0):
+    if ((sumOnce + sumTwice) % 10 == 0):
+        ...
+    else:
         print("INVALID")
         return
 
-    
+
 
 
 
