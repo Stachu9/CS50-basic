@@ -1,7 +1,8 @@
-
-height = int(input("Height: "))
-
-
+flag = True
+while flag:
+    height = int(input("Height: "))
+    if height > 1:
+        flag = False
 
 for i in range(height):
     for j in range(height - i+1):
