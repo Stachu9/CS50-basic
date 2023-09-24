@@ -6,5 +6,6 @@ except:
 
 for i in range(height):
     for j in range(i - 1):
-        print(" ")
+        print(" ", end = "")
+    for z in range()
 
