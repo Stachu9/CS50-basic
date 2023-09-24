@@ -15,6 +15,12 @@ while flag:
             flag = True
             break
 
-numbe
+counter = -1
+sumTwice = 0
+sumOnce = 0
+while True:
+    try:
+        
+
 
 
