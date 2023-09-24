@@ -9,7 +9,6 @@ N = 1000
 
 
 def main():
-
     # Ensure correct usage
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
@@ -21,13 +20,13 @@ def main():
         counter = 0
         for team in file_reader:
             teams += [team]
-            teams[counter]['rating'] = int(teams[counter]['rating'])
+            teams[counter]["rating"] = int(teams[counter]["rating"])
             counter += 1
 
     counts = {}
 
     for i in teams:
-        counts[i['team']] = 0
+        counts[i["team"]] = 0
 
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
@@ -67,7 +66,8 @@ def simulate_tournament(teams):
     while len(tempList) > 1:
         tempList = simulate_round(tempList)
 
-    return tempList[0]['team']
+    return tempList[0]["team"]
+
 
 if __name__ == "__main__":
     main()
