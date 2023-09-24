@@ -2,7 +2,8 @@ flag = True
 while flag:
     cardNum = input("Enter card number: ")
     for c in cardNum:
-        if 
+        if isalpha(c):
+            
     if cardNum:
         flag = False
 
