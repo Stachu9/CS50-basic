@@ -24,6 +24,7 @@ def main():
             teams += [team]
             teams[counter]['rating'] = int(teams[counter]['rating'])
             print(teams[counter])
+            counter += 1
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
