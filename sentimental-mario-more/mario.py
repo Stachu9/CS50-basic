@@ -1,1 +1,1 @@
-# TODO
+hieght = int(input("Hieght: "))
