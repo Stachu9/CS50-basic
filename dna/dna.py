@@ -25,7 +25,7 @@ def main():
         text = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    strList []
+    strList = []
     for c in list[0]:
         if not c == "name":
             strList += [{c : longest_match(text, c)}]
