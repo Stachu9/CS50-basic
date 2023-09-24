@@ -9,7 +9,7 @@ def main():
         i = 0
         for c in cardNum:
 
-            numberList[i] = int(c)
+            numberList.append(int(c))
             #i += 1
 
             #print("Number must contain only integers!")
