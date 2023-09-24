@@ -1,7 +1,7 @@
 flag = True
 while flag:
     height = int(input("Height: "))
-    if height > 0:
+    if height > 0 and height < 9:
         flag = False
 
 for i in range(height):
