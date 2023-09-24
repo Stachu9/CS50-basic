@@ -28,7 +28,8 @@ def main():
     strList []
     for c in list[0]:
         if not c == "name":
-            strList.append()
+            strList += [{c : 0}]
+            
 
     # TODO: Check database for matching profiles
 
