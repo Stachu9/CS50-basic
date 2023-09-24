@@ -4,9 +4,12 @@ while flag:
     if cardNum:
         flag = False
     for c in cardNum:
-        if isalpha(c):
+        try:
+            test = int(c)
+        except:
             print("Number must contain only integers!")
             flag = True
+            break
 
 
 
