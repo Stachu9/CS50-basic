@@ -25,11 +25,11 @@ def main():
             if flag1:
                 sumOnce += numberList[counter]
                 counter -= 1
-                flag = False
+                flag1 = False
             else:
                 sumTwice += numberList[counter] * 2
                 counter -= 1
-                flag = True
+                flag1 = True
         except:
             break
 
