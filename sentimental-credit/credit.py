@@ -15,12 +15,25 @@ while flag:
             flag = True
             break
 
+flag1 = True
 counter = -1
 sumTwice = 0
 sumOnce = 0
 while True:
     try:
-        
+        if flag1:
+            sumOnce += numberList[counter]
+            counter -= 1
+            flag = False
+        else:
+            sumTwice += numberList[counter] * 2
+            counter -= 1
+            flag = True
+    except:
+        break
+
+
+
 
 
 
