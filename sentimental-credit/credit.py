@@ -47,12 +47,4 @@ def main():
         print("INVALID")
         return
 
-
-
-
-
-
-
-
-
-
+main()
