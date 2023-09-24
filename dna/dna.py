@@ -12,10 +12,13 @@ def main():
     list = []
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
-
+        counter = 0
         for person in file_reader:
             list += [person]
-
+            list[counter]["AGATC"] = int(list[counter]["AGATC"])
+            list[counter]["AATG"] = int(list[counter]["AATG"])
+            list[counter]["rating"] = int(list[counter]["rating"])
+            counter += 1
 
     # TODO: Read DNA sequence file into a variable
 
