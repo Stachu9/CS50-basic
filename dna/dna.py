@@ -28,9 +28,8 @@ def main():
     strList []
     for c in list[0]:
         if not c == "name":
-            numSequence
-            strList += [{c : 0}]
-
+            numSequence = text.count(c)
+            strList += [{c : numSequence}]
 
 
     # TODO: Check database for matching profiles
