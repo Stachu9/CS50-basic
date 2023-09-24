@@ -38,8 +38,12 @@ def main():
             printf("VISA\n");
             return
         if (numList[0] == 3 and (numList[0] == 4 or numList[0] == 7) and (len(numList) == 15)
-            printf("VISA\n");
+            printf("AMEX\n");
             return
+        if (numList[0] == 4 and (len(numList) == 13 or len(numList) == 16))
+            printf("MASTERCARD\n");
+            return
+
     else:
         print("INVALID")
         return
