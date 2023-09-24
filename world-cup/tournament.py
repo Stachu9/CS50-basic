@@ -28,9 +28,9 @@ def main():
 
     counts = {}
 
-    for i int teams:
-        counts[i['name']] = 0
-    
+    for i in teams:
+        counts[i['team']] = 0
+
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
         counts[simulate_tournament(teams)] += 1
@@ -69,7 +69,7 @@ def simulate_tournament(teams):
     if len(tempList > 1):
         tempList = simulate_round(tempList)
 
-    return tempList[0]['name']
+    return tempList[0]['team']
 
 if __name__ == "__main__":
     main()
