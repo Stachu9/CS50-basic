@@ -21,6 +21,8 @@ def main():
             counter += 1
 
     # TODO: Read DNA sequence file into a variable
+    with open(sys.atg[2]) as file:
+        text = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
 
