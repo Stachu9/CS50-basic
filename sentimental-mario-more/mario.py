@@ -5,7 +5,13 @@ except:
     return
 
 for i in range(height):
-    for j in range(i - 1):
+    for j in range(hieght - i):
         print(" ", end = "")
-    for z in range()
+    for z in range(i):
+        print("#", end = "")
+    print("  ", end = "")
+    for z in range(i):
+        print("#", end = "")
+    print()
+
 
