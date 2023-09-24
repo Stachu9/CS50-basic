@@ -1,9 +1,14 @@
-height = 0
+flag = True
 
-try:
-    input_func()
-except:
-    print("Only positive integers from 1 to 8 allowed")
+while flag:
+    try:
+        flag = True
+        while flag:
+            height = int(input("Height: "))
+            if height > 0 and height < 9:
+                flag = False
+    except:
+        print("Only integers allowed")
 
 for i in range(height):
     for j in range(height - (i+1)):
@@ -17,11 +22,3 @@ for i in range(height):
     for z in range(i+1):
         print("#", end = "")
     print()
-
-def input_func():
-    flag = True
-    while flag:
-        height = int(input("Height: "))
-        if height > 0 and height < 9:
-            flag = False
-
