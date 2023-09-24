@@ -1,3 +1,7 @@
 flag = True
+while flag:
+    cardNum = input("Enter card number: ")
+    if cardNum:
+        flag = False
 
-cardNum = input("Enter card number: ")
+
