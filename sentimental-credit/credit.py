@@ -27,7 +27,8 @@ def main():
                 counter -= 1
                 flag1 = False
             else:
-                sumTwice += numberList[counter] * 2
+                for digit in str(numberList[counter] * 2):
+                    sumTwice += int(digit)
                 counter -= 1
                 flag1 = True
         except:
