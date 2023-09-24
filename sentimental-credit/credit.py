@@ -8,13 +8,13 @@ def main():
             flag = False
         i = 0
         for c in cardNum:
-
-            numberList.append(int(c))
-            #i += 1
-
-            #print("Number must contain only integers!")
-            #flag = True
-            #break
+            try:
+                numberList.append(int(c))
+                i += 1
+            except:
+                print("Number must contain only integers!")
+                flag = True
+                break
 
     flag1 = True
     counter = -1
