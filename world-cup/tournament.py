@@ -61,7 +61,7 @@ def simulate_tournament(teams):
     # TODO
     tempList = teams[:]
     if len(tempList > 1):
-        simulate_round(tempList)
+        tempList = simulate_round(tempList)
 
     return tempList[0]['name']
 
