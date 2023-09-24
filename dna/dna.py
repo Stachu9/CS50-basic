@@ -28,8 +28,7 @@ def main():
     strList []
     for c in list[0]:
         if not c == "name":
-            numSequence = text.count(c)
-            strList += [{c : numSequence}]
+            strList += [{c : longest_match(text, c)}]
 
 
     # TODO: Check database for matching profiles
