@@ -29,7 +29,8 @@ def main():
     counts = {}
 
     for i int teams:
-        counts[i['name']]
+        counts[i['name']] = 0
+    
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
         counts[simulate_tournament(teams)] += 1
