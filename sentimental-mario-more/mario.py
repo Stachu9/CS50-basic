@@ -1,16 +1,15 @@
-try:
-    height = int(input("Height: "))
-except:
-    print("Height must be an integer!")
-    return
+
+height = int(input("Height: "))
+
+
 
 for i in range(height):
-    for j in range(hieght - i):
+    for j in range(height - i+1):
         print(" ", end = "")
-    for z in range(i):
+    for z in range(i+1):
         print("#", end = "")
     print("  ", end = "")
-    for z in range(i):
+    for z in range(i+1):
         print("#", end = "")
     print()
 
