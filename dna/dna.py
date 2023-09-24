@@ -15,9 +15,9 @@ def main():
         counter = 0
         for person in file_reader:
             list += [person]
-            list[counter]["AGATC"] = int(list[counter]["AGATC"])
-            list[counter]["AATG"] = int(list[counter]["AATG"])
-            list[counter]["rating"] = int(list[counter]["rating"])
+            for key in list[counter]:
+                if not key == "name":
+                    list[counter][key] = int(list[counter][key])
             counter += 1
 
     # TODO: Read DNA sequence file into a variable
