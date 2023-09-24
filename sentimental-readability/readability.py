@@ -16,6 +16,10 @@ for c in text:
 
 index = 0.0588 * (100.0 * letters / words) - 0.296 * (100.0 * sentences / words) - 15.8
 
+print(sentences)
+print(words)
+print(letters)
+
 if index < 1:
     print("Before Grade 1")
 elif index >= 16:
