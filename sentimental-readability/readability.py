@@ -11,5 +11,7 @@ for c in text:
         sentences += 1
     elif c == " ":
         words += 1
-    elif isalpha(c):
-        
+    elif c.isalpha():
+        letters += 1
+
+index = 0.0588 * lett
