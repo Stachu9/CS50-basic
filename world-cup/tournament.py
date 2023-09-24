@@ -19,8 +19,10 @@ def main():
     with open(sys.argv[1]) as file:
         file_reader = DictReader(file)
 
+    counter = 0
     for team in file_reader:
         teams += [team]
+        teams[counter].
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
