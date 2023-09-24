@@ -44,6 +44,9 @@ def main():
         if (numList[0] == 5 and (numList[1] == 1 or numList[1] == 2 or numList[1] == 3 or numList[1] == 4 or numList[1] == 5) and len(numList) == 16):
             print("MASTERCARD\n");
             return
+        else:
+            print("INVALID\n")
+            return
     else:
         print("INVALID\n")
         return
