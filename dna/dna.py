@@ -32,8 +32,8 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    flag = True
     for person in list:
+        flag = True
         for key in person:
             if not key == "name":
                 if not person[key] == strObj[key]:
