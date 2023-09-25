@@ -25,17 +25,17 @@ def main():
         text = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    strList = []
+    strObj = {}
     for c in list[0]:
         if not c == "name":
-            strList += [{c : longest_match(text, c)}]
+            strObj[c] = longest_match(text, c)
 
 
     # TODO: Check database for matching profiles
     for person in list:
         for key in person:
             if not key == "name":
-                if person[key] == strList[key]:
+                if person[key] == strObj[key]:
                     print(person[name])
                     return
 
