@@ -36,7 +36,7 @@ def main():
         for key in person:
             if not key == "name":
                 if not person[key] == strObj[key]:
-                     a = 0
+                     break
 
         print(person["name"])
 
