@@ -37,6 +37,8 @@ def main():
             if not key == "name":
                 if not person[key] == strObj[key]:
                     break
+        print(person)
+        print(strObj)
         print(person["name"])
         return
 
