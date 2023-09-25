@@ -3,7 +3,6 @@ import sys
 
 
 def main():
-
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py database sequence")
@@ -30,19 +29,17 @@ def main():
         if not c == "name":
             strObj[c] = longest_match(text, c)
 
-
     # TODO: Check database for matching profiles
     for person in list:
         flag = True
         for key in person:
             if not key == "name":
                 if not person[key] == strObj[key]:
-                     flag = False
-                     break
+                    flag = False
+                    break
         if flag:
             print(person["name"])
             return
-
 
     print("No match")
     return
@@ -58,7 +55,6 @@ def longest_match(sequence, subsequence):
 
     # Check each character in sequence for most consecutive runs of subsequence
     for i in range(sequence_length):
-
         # Initialize count of consecutive runs
         count = 0
 
@@ -66,7 +62,6 @@ def longest_match(sequence, subsequence):
         # If a match, move substring to next potential match in sequence
         # Continue moving substring and checking for matches until out of consecutive matches
         while True:
-
             # Adjust substring start and end
             start = i + count * subsequence_length
             end = start + subsequence_length
