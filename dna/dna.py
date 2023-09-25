@@ -36,7 +36,7 @@ def main():
         for key in person:
             if not key == "name":
                 if person[key] == strObj[key]:
-                    print(person[name])
+                    print(person["name"])
                     return
 
     print("No match")
