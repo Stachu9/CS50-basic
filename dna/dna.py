@@ -32,6 +32,11 @@ def main():
 
 
     # TODO: Check database for matching profiles
+    for person in range(list):
+        for key in person:
+            if not key == "name":
+                if person[key] == strList[key]:
+                    
 
     return
 
