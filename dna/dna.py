@@ -35,8 +35,8 @@ def main():
     for person in list:
         for key in person:
             if not key == "name":
-                if person[key] == strObj[key]:
-                    print(person["name"])
+                if not person[key] == strObj[key]:
+                print(person["name"])
                     return
 
     print("No match")
