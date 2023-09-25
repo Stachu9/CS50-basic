@@ -32,14 +32,16 @@ def main():
 
 
     # TODO: Check database for matching profiles
+    flag = True
     for person in list:
         for key in person:
             if not key == "name":
                 if not person[key] == strObj[key]:
+                     flag = False
                      break
-
-        print(person["name"])
-        return
+        if flag:
+            print(person["name"])
+            return
 
 
     print("No match")
