@@ -39,6 +39,7 @@ def main():
                      break
 
         print(person["name"])
+        return
 
 
     print("No match")
