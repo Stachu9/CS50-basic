@@ -45,9 +45,6 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
-int count7 = 0;
-int count24 = 0;
-
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
