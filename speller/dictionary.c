@@ -56,7 +56,7 @@ unsigned int hash(const char *word)
     {
         if (((toupper(word[0]) - 'A') * (toupper(word[1]) - 'A')) < 0)
         {
-            printf("%i\n", ((toupper(word[0]) - 'A') * (toupper(word[1]) - 'A')));
+            printf("%i\n, %c\n", ((toupper(word[0]) - 'A') * (toupper(word[1]) - 'A')), word[1]);
         }
         return (toupper(word[0]) - 'A') * (toupper(word[1]) - 'A');
     }
