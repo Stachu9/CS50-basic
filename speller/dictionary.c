@@ -59,15 +59,15 @@ unsigned int hash(const char *word)
     }
     else
     {
-        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) == 7)
+        if (26 * abs(toupper(word[0]) - 'A') + abs(toupper(word[1]) - 'A') == 7)
         {
             count7++;
         }
-        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) == 24)
+        if (26 * abs(toupper(word[0]) - 'A') + abs(toupper(word[1]) - 'A') == 24)
         {
             count24++;
         }
-        return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A');
+        return 26 * abs(toupper(word[0]) - 'A') + abs(toupper(word[1]) - 'A');
     }
 
 }
