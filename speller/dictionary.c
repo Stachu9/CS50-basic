@@ -45,6 +45,9 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
+int count7 = 0;
+int count24 = 0;
+
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
@@ -54,6 +57,14 @@ unsigned int hash(const char *word)
     }
     else if (strlen(word) == 2)
     {
+        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) == 7)
+        {
+            count7++;
+        }
+        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) == 24)
+        {
+            count24++;
+        }
         return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A');
     }
     else
