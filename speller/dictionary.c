@@ -52,9 +52,13 @@ unsigned int hash(const char *word)
     {
         return toupper(word[0]) - 'A';
     }
-    else
+    else if (strlen(word) == 2)
     {
         return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A');
+    }
+    else
+    {
+        return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A') * abs(toupper(word[2]) - 'A');
     }
 }
 
