@@ -69,6 +69,14 @@ unsigned int hash(const char *word)
     }
     else
     {
+        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) * abs(toupper(word[2]) - 'A') == 7)
+        {
+            count7++;
+        }
+        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) * abs(toupper(word[2]) - 'A') == 24)
+        {
+            count24++;
+        }
         return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A') * abs(toupper(word[2]) - 'A');
     }
 }
