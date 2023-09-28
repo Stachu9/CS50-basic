@@ -57,7 +57,7 @@ unsigned int hash(const char *word)
     {
         return toupper(word[0]) - 'A';
     }
-    else if (strlen(word) == 2)
+    else
     {
         if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) == 7)
         {
@@ -69,18 +69,7 @@ unsigned int hash(const char *word)
         }
         return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A');
     }
-    else
-    {
-        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) * abs(toupper(word[2]) - 'A') == 7)
-        {
-            count7++;
-        }
-        if ((abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A')) * abs(toupper(word[2]) - 'A') == 24)
-        {
-            count24++;
-        }
-        return abs(toupper(word[0]) - 'A') * abs(toupper(word[1]) - 'A') * abs(toupper(word[2]) - 'A');
-    }
+
 }
 
 // Loads dictionary into memory, returning true if successful, else false
