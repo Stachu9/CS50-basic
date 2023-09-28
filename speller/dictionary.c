@@ -43,7 +43,12 @@ bool check(const char *word)
     }
     return false;
 }
-
+int count7 = 0;
+int count24 = 0;
+void results(void)
+{
+    printf("count 7: %i \n count 24: %i\n", count7, count24);
+}
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
