@@ -1,1 +1,1 @@
-SELECT SELECT id FROM movies WHERE title = "Toy Story";
+SELECT (SELECT id FROM movies WHERE title = "Toy Story");
