@@ -1,1 +1,0 @@
-SELECT person_id FROM stars JOIN (SELECT id FROM movies WHERE year = 2004) ON stars.movie_id = movies.id;
