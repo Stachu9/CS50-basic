@@ -1,1 +1,1 @@
-SELECT (SELECT id FROM movies WHERE title = "Toy Story");
+SELECT name FROM people JOIN  (SELECT id FROM movies WHERE title = "Toy Story");
