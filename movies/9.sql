@@ -1,1 +1,1 @@
-(SELECT id FROM movies WHERE year = 2004)
+SELECT person_id(SELECT id FROM movies WHERE year = 2004)
