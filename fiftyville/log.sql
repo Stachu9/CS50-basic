@@ -39,4 +39,4 @@ SELECT name FROM (SELECT name, phone_number, passport_number FROM
     AS z ON people.id = z.person_id) AS j JOIN
     (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute <= 25 AND minute >= 15 AND activity = "exit")
 AS y ON j.license_plate = y.license_plate) AS a
-JOIN (SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60) AS b ON a.phone_number = b.caller
+JOIN (SELECT passport_number, seat FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE full_name LIKE "%iftyville%") AND year = 2021 AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1))
