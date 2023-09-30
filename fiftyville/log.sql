@@ -13,3 +13,5 @@ SELECT name, phone_number, passport_number, license_plate, creation_year, amount
 SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute <= 25 AND minute >= 15 AND activity = "exit";
 -- Check phone calls
 SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
+-- Checkk Fiftyville airport id
+SELECT id FROM airports WHERE full_name LIKE "%iftyville%";
