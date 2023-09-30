@@ -7,5 +7,5 @@ SELECT name, transcript FROM interviews WHERE year = 2021 AND month = 7 AND day 
 SELECT account_number, amount FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
 -- Check person id, who withdrawed money from ATM
 SELECT person_id, creation_year, amount FROM bank_accounts JOIN (SELECT account_number, amount FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw") AS x ON bank_accounts.account_number = x.account_number;
--- Check names who withdrawed money from ATM
+-- Check names, phone numbers, passports, lcense plates, account creation year who withdrawed money from ATM
 SELECT name, phone_number, passport_number, license_plate, creation_year, amount FROM people JOIN (SELECT person_id, creation_year, amount FROM bank_accounts JOIN (SELECT account_number, amount FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw") AS x ON bank_accounts.account_number = x.account_number) AS z ON people.id = z.person_id;
