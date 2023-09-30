@@ -15,3 +15,5 @@ SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 A
 SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
 -- Checkk Fiftyville airport id
 SELECT id FROM airports WHERE full_name LIKE "%iftyville%";
+-- Check first flight from fiftyville on 29.07
+SELECT destination_airport, hour, minute FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE full_name LIKE "%iftyville%") AND year = 2021 AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1;
