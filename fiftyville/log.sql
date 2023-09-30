@@ -17,3 +17,4 @@ SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day
 SELECT id FROM airports WHERE full_name LIKE "%iftyville%";
 -- Check first flight from fiftyville on 29.07
 SELECT id, destination_airport_id, hour, minute FROM flights WHERE origin_airport_id = (SELECT id FROM airports WHERE full_name LIKE "%iftyville%") AND year = 2021 AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1;
+-- Check destination airport
