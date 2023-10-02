@@ -11,6 +11,7 @@
                 let triggerObject = event.srcElement;
                 if (triggerObject.innerHTML == "Radom") {
                     document.getElementById('a').style.backgroundColor = "red";
+                    document.getElementById('e') = "Incorrect";
                 }
                 else if (triggerObject.innerHTML == "Warszawa") {
                     document.getElementById('b').style.backgroundColor = "green";
@@ -36,6 +37,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the capitol od Poland?</h3>
+                <h3 id="e"></h3>
                     <button id="a" onclick="checkAnswer(event);">Radom</button>
                     <button id="b" onclick="checkAnswer(event);">Warszawa</button>
                     <button id="c" onclick="checkAnswer(event);">Sosnowiec</button>
