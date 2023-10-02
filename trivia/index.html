@@ -29,9 +29,9 @@
             }
 
             function checkSecondAnswer() {
-                let name = document.getElementById(answer);
-                if (!name === "yellow") {
-                    document.getElementById('d').style.backgroundColor = "red";
+                let answer = document.getElementById(answer).value;
+                if (!answer === "yellow") {
+                    document.getElementById('answer').style.backgroundColor = "red";
                 }
             }
         </script>
