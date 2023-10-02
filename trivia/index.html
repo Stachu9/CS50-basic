@@ -27,6 +27,13 @@
                 }
 
             }
+
+            function checkSecondAnswer() {
+                let name = document.getElementById(answer);
+                if (!name === "yellow") {
+                    document.getElementById('d').style.backgroundColor = "red";
+                }
+            }
         </script>
     </head>
     <body>
@@ -51,6 +58,11 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
+                <h3>What is the color of the sun?</h3>
+                    <form onsubmit="chechSecondAnswer()">
+                        <input id="answer" placeholder="answer">
+                        <button type="submit">Check</button>
+                    </form>
             </div>
         </div>
     </body>
