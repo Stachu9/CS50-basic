@@ -9,8 +9,17 @@
             // TODO: Add code to check answers to questions
             function checkAnswer(event) {
                 let triggerObject = event.srcElement;
-                if (triggerObject.innerHTML == "Warszawa") {
+                if (triggerObject.innerHTML == "Radom") {
                     document.getElementById('a').style.backgroundColor = "red";
+                }
+                else if (triggerObject.innerHTML == "Warszawa") {
+                    document.getElementById('b').style.backgroundColor = "green";
+                }
+                else if (triggerObject.innerHTML == "Sosnowiec") {
+                    document.getElementById('c').style.backgroundColor = "red";
+                }
+                else if (triggerObject.innerHTML == "Szczecin") {
+                    document.getElementById('d').style.backgroundColor = "red";
                 }
 
             }
