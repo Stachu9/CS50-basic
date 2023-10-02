@@ -9,8 +9,8 @@
             // TODO: Add code to check answers to questions
             function checkAnswer(event) {
                 let triggerObject = event.src.Element;
-                if (!triggerObject.innerHTML == "Warszawa") {
-                    document.getElementById('#a').style.backgroundColor = "red";
+                if (triggerObject.innerHTML == "Warszawa") {
+                    document.getElementById('a').style.backgroundColor = "red";
                 }
 
             }
