@@ -22,6 +22,7 @@
                     document.getElementById('e').textContent ="Incorrect";
                 }
                 else if (triggerObject.innerHTML == "Szczecin") {
+                    console.log("sef");
                     document.getElementById('d').style.backgroundColor = "red";
                     document.getElementById('e').textContent ="Incorrect";
                 }
@@ -30,7 +31,7 @@
 
             function checkSecondAnswer() {
                 let Answer = document.getElementById('answer').value;
-                console.log("seffsf");
+                console.log(Answer);
                 if (!Answer === "yellow") {
                     document.getElementById('answer').style.background = "red";
                 }
@@ -60,7 +61,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the color of the sun?</h3>
-                    <form onsubmit="chechSecondAnswer()">
+                    <form onsubmit="checkSecondAnswer()">
                         <input id="answer" placeholder="answer">
                         <button type="submit">Check</button>
                     </form>
