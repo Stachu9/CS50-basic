@@ -22,7 +22,6 @@
                     document.getElementById('e').textContent ="Incorrect";
                 }
                 else if (triggerObject.innerHTML == "Szczecin") {
-                    console.log("sef");
                     document.getElementById('d').style.backgroundColor = "red";
                     document.getElementById('e').textContent ="Incorrect";
                 }
@@ -31,9 +30,13 @@
 
             function checkSecondAnswer() {
                 let Answer = document.getElementById('answer').value;
-                console.log(Answer);
-                if (Answer === "yellow") {
+                if (!(Answer === "yellow")) {
                     document.getElementById('answer').style.backgroundColor = "red";
+                    document.getElementById('f').textContent ="Incorrect";
+                }
+                else if ((Answer === "yellow")) {
+                    document.getElementById('answer').style.backgroundColor = "green";
+                    document.getElementById('f').textContent ="Correct";
                 }
             }
         </script>
@@ -61,6 +64,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the color of the sun?</h3>
+                <h3 id="f"></h3>
                     <form onsubmit="checkSecondAnswer(); return false;">
                         <input id="answer" placeholder="answer">
                         <button type="submit">Check</button>
