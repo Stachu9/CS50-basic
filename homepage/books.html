@@ -10,9 +10,7 @@
             function specialFunc(event) {
                 console.log(event);
             }
-
-            let element = document.getElementByTagName("li");
-            element.addEventListener("click", specialFunc(event));
+            document.getElementByTagName("li").addEventListener("click", specialFunc(event));
         </script>
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
