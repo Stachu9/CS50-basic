@@ -10,8 +10,8 @@
             function specialFunc() {
                 console.log(5);
             }
-            let elements = document.getElementsByTagName("li");
-            elements.map((item) => item.addEventListener("click", specialFunc));
+            let elements = document.getElementsById("bbb");
+            elements.addEventListener("click", specialFunc);
         </script>
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
@@ -36,7 +36,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <ol>
-                        <li>Book 1</li>
+                        <li id="bbb">Book 1</li>
                         <li>Book 2</li>
                         <li>Book 3</li>
                         <li>Book 4</li>
