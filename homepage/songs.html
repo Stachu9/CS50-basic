@@ -31,17 +31,18 @@
                 document.getElementById("lala").appendChild(text)
             }
 
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-            setTimeout(adding, 1000);
-
-
+            function lalaFunc() {
+                let time = 1000
+                while (true) {
+                    setTimeout(adding, time);
+                    time += 1000;
+                }
+            }
+            function main() {
+                document.addEventListener('DOMContentLoaded', lalaFunc);
+            }
+            main();
         </script>
+
     </body>
 </html>
