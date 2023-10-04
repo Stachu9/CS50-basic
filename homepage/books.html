@@ -52,6 +52,7 @@
         <script>
             function specialFunc(event) {
                 alert("you clicked " + event.target.textContent);
+                event.target.id = "nowy";
                 console.log(event);
             }
             let elements = document.getElementsByTagName("li");
