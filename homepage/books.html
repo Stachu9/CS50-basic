@@ -54,7 +54,8 @@
                 alert("you clicked " + event.target.textContent);
                 event.target.id = "nowy";
                 console.log(event);
-                document.getElementById("nowy").appendChild(" CHOSEN!!");
+                const text = document.createTextNode("!!!!!!!!!!!!!!");
+                document.getElementById("nowy").appendChild(text);
             }
             let elements = document.getElementsByTagName("li");
             console.log(elements);
