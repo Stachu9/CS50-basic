@@ -35,7 +35,6 @@
                         <li>Book 3</li>
                         <li>Book 4</li>
                         <li>Book 5</li>
-                        <div></div>
                         <li>Book 6</li>
                         <li>Book 7</li>
                         <li>Book 8</li>
@@ -57,6 +56,8 @@
                 console.log(event);
                 const text = document.createTextNode("!!!!!!!!!!!!!!");
                 document.getElementById("nowy").appendChild(text);
+                document.getElementById("nowy").insertAdjacentText('afterbegin', '!!!!!!!!!!!');
+                
             }
             let elements = document.getElementsByTagName("li");
             console.log(elements);
