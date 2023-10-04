@@ -57,7 +57,8 @@
                 const text = document.createTextNode("!!!!!!!!!!!!!!");
                 document.getElementById("nowy").appendChild(text);
                 document.getElementById("nowy").insertAdjacentText('afterbegin', '!!!!!!!!!!!');
-                
+                document.getElementById("nowy").insertAdjacentHTML('beforebegin', '<div>!!!!!!!!!!!!!!!!!!!</div>');
+                document.getElementById("nowy").insertAdjacentHTML('beforeend', '<div>!!!!!!!!!!!!!!!!!!!</div>');
             }
             let elements = document.getElementsByTagName("li");
             console.log(elements);
