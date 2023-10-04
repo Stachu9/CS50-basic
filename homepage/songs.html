@@ -28,12 +28,11 @@
         <script>
             const text = document.createTextNode(" La");
             function lalaFunc() {
-                document.getElementById("lala").appendChild(text);
+                while (true) {
+                    setTimeout((document.getElementById("lala").appendChild(text)), 500);
+                }
             }
-
-            while (true) {
-                setTimeout(lalaFunc(), 500);
-            }
+            document.addEventListener('DOMContentLoaded', lalaFunc);
         </script>
 
     </body>
