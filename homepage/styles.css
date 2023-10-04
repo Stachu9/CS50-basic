@@ -9,3 +9,6 @@ h1 {
     background-color: blue;
     display: inline-block;
 }
+li {
+    cursor: pointer;
+}
