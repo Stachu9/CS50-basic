@@ -20,19 +20,19 @@
         </header>
         <main>
             <h2>Best song:</h2>
-            <p id="lala"></p>
+            <p id="lala">La</p>
         </main>
         <footer>
             <p>My contact, adress, aditional informations.</p>
         </footer>
         <script>
-            const text = document.createTextNode("La");
+            const text = document.createTextNode(" La");
             function lalaFunc() {
                 document.getElementById("lala").appendChild(text);
             }
 
             while (true) {
-                
+                setTimeout(lalaFunc(), 500);
             }
         </script>
 
