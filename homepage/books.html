@@ -58,6 +58,8 @@
             for (item of elements) {
                 item.addEventListener("click", ()=>specialFunc(event));
             }
+            const tablica = [document.getElementsByTagName("li")];
+            tablica.map((el)=>el.addEventListener("click", ()=>specialFunc(event))
         </script>
     </body>
 </html>
