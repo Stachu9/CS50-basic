@@ -54,7 +54,7 @@
                 alert("you clicked " + event.target.textContent);
             }
             let elements = document.getElementsByTagName("li");
-            console.log(elements);
+            console.log(typeof elements);
             for (item of elements) {
                 item.addEventListener("click", ()=>specialFunc(event));
             }
