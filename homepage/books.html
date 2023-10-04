@@ -52,17 +52,12 @@
         <script>
             function specialFunc(event) {
                 alert("you clicked " + event.target.textContent);
-                console.log(5);
             }
-            let tablica = [1,2,3,4,5,6];
-            let new = tablica.map((el)=>el * 2);
-
             let elements = document.getElementsByTagName("li");
             console.log(elements);
             for (item of elements) {
                 item.addEventListener("click", ()=>specialFunc(event));
             }
-
         </script>
     </body>
 </html>
