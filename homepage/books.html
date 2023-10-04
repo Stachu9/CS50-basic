@@ -50,13 +50,13 @@
             <p>My contact, adress, aditional informations.</p>
         </footer>
         <script>
-            function specialFunc() {
-                console.log(5);
+            function specialFunc(event) {
+                console.log(event);
             }
             let elements = document.getElementsByTagName("li");
             console.log(elements);
             for (item of elements) {
-                item.addEventListener("click", specialFunc);
+                item.addEventListener("click", ()=>specialFunc(event));
             }
         </script>
     </body>
