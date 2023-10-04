@@ -30,18 +30,12 @@
                 let text = document.createTextNode(" La");
                 document.getElementById("lala").appendChild(text)
             }
+            let i = 10;
+            while (i > 0) {
+                setTimeout(adding, 1000);
+                i--;
+            }
 
-            function lalaFunc() {
-                let i = 10;
-                while (i > 0) {
-                    setTimeout(adding, 1000);
-                    i--;
-                }
-            }
-            function main() {
-                document.addEventListener('DOMContentLoaded', lalaFunc);
-            }
-            main();
         </script>
     </body>
 </html>
