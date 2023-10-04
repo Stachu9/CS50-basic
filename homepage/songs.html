@@ -26,12 +26,15 @@
             <p>My contact, adress, aditional informations.</p>
         </footer>
         <script>
-            const text = document.createTextNode(" La");
+            function adding() {
+                let text = document.createTextNode(" La");
+                document.getElementById("lala").appendChild(text)
+            }
+
             function lalaFunc() {
                 let i = 10;
                 while (i > 0) {
-                    let text = document.createTextNode(" La");
-                    setTimeout((document.getElementById("lala").appendChild(text)), 500);
+                    setTimeout(adding, 1000);
                     i--;
                 }
             }
