@@ -34,8 +34,8 @@
             function lalaFunc() {
                 let i = 1000;
                 let time = 500
-                while (i > 0) {
-                    setTimeout(adding, time);
+                while (true) {
+                    await setTimeout(adding, time);
                     time += 500;
                     i--;
                 }
