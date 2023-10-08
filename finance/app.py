@@ -116,6 +116,7 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
+        # Check if there is already username in database
         usernameInDatabase = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
 
         if not username or not usernameInDatabase[0]["COUNT(*)"] == 0:
@@ -123,8 +124,12 @@ def register():
 
         if not password or not(password == confirmation):
             return apology("provide password and confirm", 409)
+
+        # Hash password and inserts data into database
         hashedPassword = generate_password_hash(password)
-        
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, password)
+        return redirect("/")
+    
     else:
         return render_template("register.html")
 
