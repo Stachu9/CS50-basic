@@ -52,6 +52,7 @@
         <script>
             function specialFunc(event) {
                 alert("you clicked " + event.target.textContent);
+                /* set new special id to the clicked element */
                 event.target.id = "nowy";
                 console.log(event);
                 const text = document.createTextNode("!!!!!!!!!!!!!!");
@@ -59,6 +60,7 @@
                 document.getElementById("nowy").insertAdjacentText('afterbegin', '!!!!!!!!!!!');
                 document.getElementById("nowy").insertAdjacentHTML('beforebegin', '<div>!!!!!!!!!!!!!!!!!!!</div>');
                 document.getElementById("nowy").insertAdjacentHTML('beforeend', '<div>!!!!!!!!!!!!!!!!!!!</div>');
+                event.target.id = "";
             }
             let elements = document.getElementsByTagName("li");
             console.log(elements);
