@@ -103,6 +103,12 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+    else:
+        return render_template("quote.html")
+
     return apology("TODO")
 
 
@@ -134,7 +140,7 @@ def register():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-        
+
         return redirect("/")
 
     else:
