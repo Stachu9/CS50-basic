@@ -121,7 +121,8 @@ def register():
         if not username or not usernameInDatabase[0]["COUNT(*)"] == 0:
             return apology("provide another username", 409)
 
-        if not password or not(password == confirmation)
+        if not password or not(password == confirmation):
+            return apology("provide password and confirm", 409)
 
     else:
         return render_template("register.html")
