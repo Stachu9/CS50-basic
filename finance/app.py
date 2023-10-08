@@ -114,7 +114,7 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
-        userList = db.execute("SELECT username FROM ")
+        userList = db.execute("SELECT COUNT() FROM ")
 
         if not username
 
