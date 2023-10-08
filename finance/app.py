@@ -127,9 +127,9 @@ def register():
 
         # Hash password and inserts data into database
         hashedPassword = generate_password_hash(password)
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, password)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, hashedPassword)
         return redirect("/")
-    
+
     else:
         return render_template("register.html")
 
