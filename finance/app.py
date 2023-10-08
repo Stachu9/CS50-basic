@@ -123,7 +123,8 @@ def register():
 
         if not password or not(password == confirmation):
             return apology("provide password and confirm", 409)
-
+        hashedPassword = generate_password_hash(password)
+        
     else:
         return render_template("register.html")
 
