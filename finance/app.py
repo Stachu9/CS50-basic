@@ -128,6 +128,13 @@ def register():
         # Hash password and inserts data into database
         hashedPassword = generate_password_hash(password)
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, hashedPassword)
+
+        # Query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+        
         return redirect("/")
 
     else:
