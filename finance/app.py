@@ -109,13 +109,16 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    userList = db.execute("SELECT COUNT(*) FROM users;")
-    print(userList)
+
 
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+
+        che = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
+
+        if not username
 
     else:
         return render_template("register.html")
