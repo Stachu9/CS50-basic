@@ -116,9 +116,10 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
-        che = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
+        usernameInDatabase = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
 
-        if not username
+        if not username or not usernameInDatabase[0]["COUNT(*)"] == 0:
+            return apology("provide another username", )
 
     else:
         return render_template("register.html")
