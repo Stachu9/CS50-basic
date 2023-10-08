@@ -106,9 +106,11 @@ def quote():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        if lookup(symbol) == None:
+        stackObject = lookup(symbol)
+        if stackObject == None:
             return apology("Wrong symbol!", 409)
-        return render_template("quoted.html", symbol=symbol)
+
+        return render_template("quoted.html", stackObject=stackObject)
     else:
         return render_template("quote.html")
 
