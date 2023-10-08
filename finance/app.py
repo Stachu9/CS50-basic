@@ -106,6 +106,7 @@ def quote():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
+        print(symbol)
         stackObject = lookup(symbol)
         if stackObject == None:
             return apology("Wrong symbol!", 409)
