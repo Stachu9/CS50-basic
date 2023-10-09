@@ -67,11 +67,11 @@ def buy():
         if not shares:
             return apology("missing shares", 400)
 
-        price = stackObject["price"]
+        price = float(stackObject["price"])
         shares = int(shares)
         totalCost = price * shares
         walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        wallet = walletDB[0]["cash"]
+        wallet = float(walletDB[0]["cash"])
 
         if wallet < totalCost:
             return apology("not enough money", 400)
