@@ -41,3 +41,6 @@ nav .navbar-brand .green
     background-color: #04AA6D;
     color: white;
   }
+  .uppercase {
+    text-transform: uppercase;
+  }

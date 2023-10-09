@@ -37,7 +37,6 @@ def index():
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
     for el in portfolio:
-        el["symbol"] = (el["symbol"]).upper()
         el["name"] = el["symbol"]
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
         el["shares"] = int(sharesTable[0]["SUM(num_shares)"])
