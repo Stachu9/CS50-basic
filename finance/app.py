@@ -46,16 +46,16 @@ def buy():
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
         stackObject = lookup(symbol)
         price = stackObject["price"]
         totalCost = price * shares
         walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        wallet = walletDB[0][cash]
+        wallet = walletDB[0]["cash"]
 
-        if symbol or stackObject:
+        if not symbol or not stackObject:
             return apology("Invalid symbol", 400)
-        if shares:
+        if not shares:
             return apology("missing shares", 400)
         if wallet < totalCost:
             return apology("not enough money", 400)
