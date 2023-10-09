@@ -60,7 +60,7 @@ def buy():
             return apology("not enough money", 400)
 
         db.execute("UPDATE users SET cash = ? WHERE id ?;", (wallet - totalCost), session["user_id"])
-        db.execute()
+        db.execute("INSERT INTO transactions")
 
     else:
         return render_template("buy.html")
