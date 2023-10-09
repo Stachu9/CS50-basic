@@ -45,13 +45,13 @@ def index():
         el["total"] = usd(totalToSumarize)
         el["price"] = usd(el["price"])
 
-    cash = usd(float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"]))
+    cash = float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"])
 
     total = cash
     for el in portfolio:
         total += totalToSumarize
 
-
+    cash = usd(cash)
 
     return render_template("index.html", portfolio=portfolio, cash=cash, total=total)
 
