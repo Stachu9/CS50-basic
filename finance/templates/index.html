@@ -6,35 +6,39 @@
 
 {% block main %}
     <table id="customers">
-        <tr>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Shares</th>
-            <th>Price</th>
-            <th>TOTAL</th>
-        </tr>
-        {% for el in portfolio %}
+        <thead>
             <tr>
-                <td class="uppercase">{{ el["symbol"] }}</td>
-                <td class="uppercase">{{ el["name"] }}</td>
-                <td>{{ el["shares"] }}</td>
-                <td>{{ el["price"] }}</td>
-                <td>{{ el["total"] }}</td>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
             </tr>
-        {% endfor %}
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Cash</td>
-            <td>{{ cash }}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>TOTAL</td>
-            <td>{{ total }}</td>
-        </tr>
+        </thead>
+        <tbody>
+            {% for el in portfolio %}
+                <tr>
+                    <td class="uppercase">{{ el["symbol"] }}</td>
+                    <td class="uppercase">{{ el["name"] }}</td>
+                    <td>{{ el["shares"] }}</td>
+                    <td>{{ el["price"] }}</td>
+                    <td>{{ el["total"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+
+                <td colspan="4">Cash</td>
+                <td>{{ cash }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TOTAL</td>
+                <td>{{ total }}</td>
+            </tr>
+        </tfoot>
     </table>
 {% endblock %}
