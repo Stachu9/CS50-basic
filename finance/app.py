@@ -60,7 +60,7 @@ def buy():
         if wallet < totalCost:
             return apology("not enough money", 400)
 
-        db.execute("UPDATE users SET cash = ? WHERE id ?;", (wallet - totalCost), session["user_id"])
+        db.execute("UPDATE users SET cash = ? WHERE id = ?;", (wallet - totalCost), session["user_id"])
         db.execute("INSERT INTO transactions VALUES ?, ?, ?, ?, ?;", session["user_id"], symbol, shares, price, now())
 
         return redirect("/")
