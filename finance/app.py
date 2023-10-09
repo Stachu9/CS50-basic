@@ -46,6 +46,10 @@ def index():
     cash = float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"])
     print(cash)
 
+    total = cash
+    for el in portfolio:
+        total += el["total"]
+
 
 
     return render_template("index.html")
