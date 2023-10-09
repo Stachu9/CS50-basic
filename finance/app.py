@@ -35,7 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    
+
     return render_template("index.html")
 
 
@@ -47,17 +47,20 @@ def buy():
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = request.form.get("shares")
         stackObject = lookup(symbol)
-        price = stackObject["price"]
-        totalCost = price * shares
-        walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        wallet = walletDB[0]["cash"]
+        
 
         if not symbol or not stackObject:
             return apology("Invalid symbol", 400)
         if not shares:
             return apology("missing shares", 400)
+
+        shares = int(shares)
+        totalCost = price * shares
+        walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        wallet = walletDB[0]["cash"]
+
         if wallet < totalCost:
             return apology("not enough money", 400)
 
