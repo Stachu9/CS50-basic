@@ -39,10 +39,12 @@ def index():
     for el in portfolio:
         el["name"] = el["symbol"]
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
-        el["shares"] = sharesTable[0]["SUM(num_shares)"]
-        el["price"] = lookup(el["symbol"])["price"]
-        print(el["price"])
+        el["shares"] = int(sharesTable[0]["SUM(num_shares)"])
+        el["price"] = int(lookup(el["symbol"])["price"])
+        el["total"] = el["shares"] * el["price"]
 
+    cash = int((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"])
+    print(cash)
 
 
 
