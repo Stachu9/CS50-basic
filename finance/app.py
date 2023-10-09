@@ -56,7 +56,7 @@ def buy():
         if shares:
             return apology("missing shares", 400)
         if wallet[0][cash] < stackObject.price * shares:
-            return apology(not enough money)
+            return apology("not enough money", 400)
 
 
     else:
