@@ -36,7 +36,10 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
-    
+    for el in portfolio:
+        
+
+
 
 
     return render_template("index.html")
