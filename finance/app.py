@@ -41,7 +41,7 @@ def index():
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
         el["shares"] = int(sharesTable[0]["SUM(num_shares)"])
         el["price"] = usd(float(lookup(el["symbol"])["price"]))
-        el["total"] = usd(el["shares"] * el["price"])
+        el["total"] = el["shares"] * el["price"]
 
     cash = usd(float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"]))
 
