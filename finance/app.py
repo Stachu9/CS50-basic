@@ -48,7 +48,8 @@ def buy():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
-        totalCost = stackObject.price * shares
+        price = stackObject.price
+        totalCost = price * shares
         walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         wallet = walletDB[0][cash]
 
@@ -60,7 +61,9 @@ def buy():
             return apology("not enough money", 400)
 
         db.execute("UPDATE users SET cash = ? WHERE id ?;", (wallet - totalCost), session["user_id"])
-        db.execute("INSERT INTO transactions")
+        db.execute("INSERT INTO transactions VALUES ?, ?, ?, ?, ?;",session["user_id"] symbol, shares, price, now())
+
+        return redirect("/")
 
     else:
         return render_template("buy.html")
