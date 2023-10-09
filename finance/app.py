@@ -38,9 +38,10 @@ def index():
     portfolio = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
     for el in portfolio:
         el["name"] = el["symbol"]
-        sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ?;", el["symbol"])
+        sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
         el["shares"] = sharesTable[0]["SUM(num_shares)"]
         el["price"] = lookup(el["symbol"])["price"]
+        print(el["price"])
 
 
 
