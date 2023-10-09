@@ -58,6 +58,8 @@ def buy():
         if wallet[0][cash] < stackObject.price * shares:
             return apology("not enough money", 400)
 
+        
+
 
     else:
         return render_template("buy.html")
