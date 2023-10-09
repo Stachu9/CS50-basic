@@ -48,13 +48,13 @@ def buy():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
-        wallet = db.execute(SELECT cash FROM users WHERE id = ?)
+        wallet = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        print(wallet)
 
         if symbol or stackObject:
             return apology("Invalid symbol", 400)
         if shares:
             return apology("missing shares", 400)
-        if shares
 
 
     else:
