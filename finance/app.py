@@ -35,7 +35,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    portfolio = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
     
+
 
     return render_template("index.html")
 
