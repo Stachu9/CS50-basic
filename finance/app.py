@@ -35,7 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    portfolio = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
+    portfolio = db.execute("SELECT symbol FROM transactions WHERE  GROUP BY symbol;")
     for el in portfolio:
         el["name"] = el["symbol"]
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ?;", el["symbol"])
