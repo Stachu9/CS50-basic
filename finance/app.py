@@ -48,7 +48,7 @@ def buy():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
-        price = stackObject.price
+        price = stackObject["price"]
         totalCost = price * shares
         walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         wallet = walletDB[0][cash]
