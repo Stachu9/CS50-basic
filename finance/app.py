@@ -37,9 +37,10 @@ def index():
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
     for el in portfolio:
+        el["symbol"] = (el["symbol"]).upper()
         el["name"] = el["symbol"]
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
-        el["shares"] = float(sharesTable[0]["SUM(num_shares)"])
+        el["shares"] = int(sharesTable[0]["SUM(num_shares)"])
         el["price"] = float(lookup(el["symbol"])["price"])
         el["total"] = el["shares"] * el["price"]
 
@@ -52,7 +53,7 @@ def index():
 
 
 
-    return render_template("index.html")
+    return render_template("index.html", portfolio=portfolio, cash=cash, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])

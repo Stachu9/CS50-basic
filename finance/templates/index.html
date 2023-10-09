@@ -13,19 +13,28 @@
             <th>Price</th>
             <th>TOTAL</th>
         </tr>
+        {% for el in portfolio %}
+            <tr>
+                <td>{{ el["symbol"] }}</td>
+                <td>{{ el["name"] }}</td>
+                <td>{{ el["shares"] }}</td>
+                <td>{{ el["price"] }}</td>
+                <td>{{ el["total"] }}</td>
+            </tr>
+        {% endfor %}
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td>Cash</td>
-            <td></td>
+            <td>{{ cash }}</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td>TOTAL</td>
-            <td></td>
+            <td>{{ total }}</td>
         </tr>
     </table>
 {% endblock %}
