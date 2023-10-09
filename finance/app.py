@@ -37,7 +37,8 @@ def index():
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT symbol FROM transactions GROUP BY symbol;")
     for el in portfolio:
-        
+        el["name"] = el["symbol"]
+        el["shares"] = (db.execute("SELECT SUM (num_shares) FROM transactions WHERE symbol = ?;", el["symbol"]))[0]["sum (num_shares)"]
 
 
 
