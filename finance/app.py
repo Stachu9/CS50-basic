@@ -74,6 +74,9 @@ def buy():
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
 
+        if shares < 0 or not(shares % 1.0 == 0):
+            return apology("wrong number of shares", 400)
+
         if not symbol or not stackObject:
             return apology("Invalid symbol", 400)
         if not shares:
