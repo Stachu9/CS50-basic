@@ -106,7 +106,8 @@ def history():
     if not history:
         return apology("no history records yet", 400)
 
-    history["price"] = usd(float(history["price"]))
+    for el in history:
+        el["price"] = usd(float(el["price"]))
 
     return render_template("history.html", history=history)
 
