@@ -75,7 +75,7 @@ def buy():
         stackObject = lookup(symbol)
 
         try:
-            int(shares)
+            shares = int(shares)
         except:
             return apology("wrong number of shares", 400)
 
