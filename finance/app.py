@@ -101,7 +101,10 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    
+
+    history = db.execute("SELECT symbol, num_shares, price, time FROM transactions WHERE person_id = ?;", session["user_id"])
+    history["price"] = 
+
     return apology("TODO")
 
 
