@@ -201,12 +201,13 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    
+
     """Sell shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        sharesToSell = request.form.get("shares")
         price = lookup(symbol)["price"]
+        sharesInWallet = 
 
         if
     else:
