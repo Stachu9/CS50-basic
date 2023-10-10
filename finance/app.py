@@ -219,6 +219,7 @@ def sell():
         cashInWallet = float((db.execute("SELECT cash FROM users WHERE id =?;", session["user_id"]))[0]["cash"])
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?;", (cashInWallet + (price * sharesToSell)), session["user_id"])
+        db.execute("INSERT INTO transactions (person_id, symbol, num_shares, price) VALUES (?, ?, ?, ?);", session["user_id"], symbol, -(sharesToSell), price)
 
     else:
         shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
