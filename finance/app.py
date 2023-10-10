@@ -174,10 +174,10 @@ def quote():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        print(symbol)
         stackObject = lookup(symbol)
         if stackObject == None:
             return apology("Wrong symbol!", 400)
+        stackObject["price"] = usd(stackObject["price"])
 
         return render_template("quoted.html", stackObject=stackObject)
     else:
