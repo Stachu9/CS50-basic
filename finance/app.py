@@ -38,11 +38,11 @@ def index():
 
     portfolio = db.execute("SELECT symbol, sum(num_shares) AS shares FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
     portfolioClone = portfolio[:]
-    
 
+    # Remove 0 shares symbols
     for el in portfolioClone:
-
-
+        if el["shares"] == 0:
+            portfolio.remove(el)
 
     for el in portfolio:
         el["name"] = el["symbol"]
