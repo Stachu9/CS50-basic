@@ -201,10 +201,14 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
+    
     """Sell shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        price = lookup(symbol)["price"]
+
+        if
     else:
         shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
         for share in shares:
