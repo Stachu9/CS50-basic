@@ -18,9 +18,9 @@
             {% for el in history %}
                 <tr>
                     <td class="uppercase">{{ el["symbol"] }}</td>
-                    <td>{{ el["shares"] }}</td>
+                    <td>{{ el["num_shares"] }}</td>
                     <td>{{ el["price"] }}</td>
-                    <td>{{ el["total"] }}</td>
+                    <td>{{ el["time"] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
