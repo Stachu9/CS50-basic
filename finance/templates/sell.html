@@ -6,13 +6,15 @@
 
 {% block main %}
     <form action="/sell" method="post">
-        <label for="symbol">Select share to sell: </label>
-        <select class="form-select form-select-lg mb-3" id="symbol" name="symbol">
-            <option value=None style="display:none">SELECT</option>
-            {% for share in shares %}
-                <option value="{{ share["symbol"] }}">{{ share["symbol"] }}</option>
-            {% endfor %}
-        </select>
+        <div class="mb-3">
+            <label for="symbol">Select share to sell: </label>
+            <select class="form-select form-select-lg mb-3" id="symbol" name="symbol">
+                <option value=None style="display:none">SELECT</option>
+                {% for share in shares %}
+                    <option value="{{ share["symbol"] }}">{{ share["symbol"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number" min="1">
         </div>
