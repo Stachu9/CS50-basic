@@ -74,7 +74,9 @@ def buy():
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
 
-        if float(shares) < 0 or not(float(shares) % 1.0 == 0):
+        print(type(shares))
+
+        if float(shares) < 0 or type(shares) == "<class 'int'>":
             return apology("wrong number of shares", 400)
 
         if not symbol or not stackObject:
