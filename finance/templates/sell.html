@@ -6,7 +6,7 @@
 
 {% block main %}
     <form action="/sell" method="post">
-        <label for="shares">Select share to sell::</label>
+        <label for="shares">Select share to sell: </label>
         <select id="shares" name="share">
             {% for share in shares %}
                 <option value="{{ share["symbol"] }}">{{ share["symbol"] }}</option>
