@@ -207,7 +207,7 @@ def sell():
         symbol = request.form.get("symbol")
         sharesToSell = request.form.get("shares")
         price = lookup(symbol)["price"]
-        sharesInWallet = db.execute(SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"]
+        sharesInWallet = db.execute(SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", symbol, session["user_id"]
 
         if
     else:
