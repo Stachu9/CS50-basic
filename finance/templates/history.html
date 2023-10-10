@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <table class="table table-stripped">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Symbol</th>
@@ -17,7 +17,7 @@
         <tbody>
             {% for el in history %}
                 <tr>
-                    <td class="uppercase">{{ el["symbol"] }}</td>
+                    <td>{{ el["symbol"] | upper }}</td>
                     <td>{{ el["num_shares"] }}</td>
                     <td>{{ el["price"] }}</td>
                     <td>{{ el["time"] }}</td>
