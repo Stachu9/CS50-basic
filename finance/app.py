@@ -218,7 +218,7 @@ def sell():
 
         cashInWallet = (db.execute("SELECT cash FROM users WHERE id =?;", session["user_id"]))[0]["cash"]
 
-
+        db.execute("UPDATE users SET cash = ? WHERE id = ?;", )
 
     else:
         shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
