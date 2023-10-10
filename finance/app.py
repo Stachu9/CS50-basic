@@ -36,17 +36,19 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    portfolio = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
+    wholePortfolio = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
 
-
-    for el in portfolio:
+    # Create new portfolio without sold shares symbols
+    counter = 0
+    for el in wholePortfolio:
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
-        el["name"] = el["symbol"]
-        el["shares"] = int(sharesTable[0]["SUM(num_shares)"])
-        el["price"] = float(lookup(el["symbol"])["price"])
-        el["totalToSumarize"] = el["shares"] * el["price"]
-        el["total"] = usd(el["totalToSumarize"])
-        el["price"] = usd(el["price"])
+        portfolio[counter]["symbol"] = el["symbol"]
+        portfolio[counter]["name"] = el["symbol"]
+        portfolio[counter]["shares"] = int(sharesTable[0]["SUM(num_shares)"])
+        portfolio[counter]["price"] = float(lookup(el["symbol"])["price"])
+        portfolio[counter]["totalToSumarize"] = el["shares"] * el["price"]
+        portfolio[counter]["total"] = usd(el["totalToSumarize"])
+        portfolio[counter]["price"] = usd(el["price"])
 
     cash = float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"])
 
