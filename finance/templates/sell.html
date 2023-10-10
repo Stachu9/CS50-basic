@@ -5,10 +5,14 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/buy" method="post">
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stack symbol" type="text">
-        </div>
+    <form action="/sell" method="post">
+        <label for="shares">Select share to sell::</label>
+<select id="shares" name="share" form="carform">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number" min="1">
         </div>
