@@ -39,6 +39,7 @@ def index():
     wholePortfolio = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
 
     # Create new portfolio without sold shares symbols
+    portfolio = []
     counter = 0
     for el in wholePortfolio:
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
@@ -49,6 +50,7 @@ def index():
         portfolio[counter]["totalToSumarize"] = el["shares"] * el["price"]
         portfolio[counter]["total"] = usd(el["totalToSumarize"])
         portfolio[counter]["price"] = usd(el["price"])
+        counter += 1
 
     cash = float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"])
 
