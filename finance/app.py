@@ -74,9 +74,12 @@ def buy():
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
 
-        print(type(shares))
+        try:
+            int(shares)
+        except:
+            return apology("wrong number of shares", 400)
 
-        if float(shares) < 0 or type(shares) == "<class 'int'>":
+        if shares < 0:
             return apology("wrong number of shares", 400)
 
         if not symbol or not stackObject:
@@ -85,7 +88,7 @@ def buy():
             return apology("missing shares", 400)
 
         price = float(stackObject["price"])
-        shares = int(shares)
+        shares = shares
         totalCost = price * shares
         walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         wallet = float(walletDB[0]["cash"])
