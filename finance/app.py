@@ -209,7 +209,6 @@ def sell():
         price = lookup(symbol)["price"]
         sharesInWallet = db.execute(SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", symbol, session["user_id"])
 
-        i
 
         if sharesToSell > sharesInWallet:
             return apology("not enough shares in wallet". 400)

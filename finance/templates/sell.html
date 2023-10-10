@@ -9,7 +9,7 @@
         <div class="mb-3">
             <label for="symbol">Select share to sell: </label>
             <select class="form-select mx-auto w-auto" id="symbol" name="symbol">
-                <option style="display:none">SELECT</option>
+                <option value=None style="display:none">SELECT</option>
                 {% for share in shares %}
                     <option value="{{ share["symbol"] }}">{{ share["symbol"] | upper }}</option>
                 {% endfor %}
