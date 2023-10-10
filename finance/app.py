@@ -229,7 +229,14 @@ def sell():
         return redirect("/")
 
     else:
-        shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
+        shares = db.execute("SELECT symbol, sum(num_shares) AS shares FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
+        sharesClone = shares[:]
+
+        # Remove 0 shares symbols
+        for share in sharesClone:
+            if el["shares"] == 0:
+                shares.remove(el)
+                
         for share in shares:
             share["number"] = db.execute("SELECT SUM(num_shares) FROM transactions WHERE person_id = ? AND symbol = ?;", session["user_id"], share["symbol"])
 
