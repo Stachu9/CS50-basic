@@ -216,9 +216,9 @@ def sell():
         if sharesToSell > sharesInWallet:
             return apology("not enough shares in wallet", 400)
 
-        cashInWallet = (db.execute("SELECT cash FROM users WHERE id =?;", session["user_id"]))[0]["cash"]
+        cashInWallet = float((db.execute("SELECT cash FROM users WHERE id =?;", session["user_id"]))[0]["cash"])
 
-        db.execute("UPDATE users SET cash = ? WHERE id = ?;", )
+        db.execute("UPDATE users SET cash = ? WHERE id = ?;", (cashInWallet + (price * sharesToSell)), session["user_id"])
 
     else:
         shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
