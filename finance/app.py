@@ -206,12 +206,15 @@ def sell():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         sharesToSell = request.form.get("shares")
-        price = lookup(symbol)["price"]
-        sharesInWallet = db.execute(SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", symbol, session["user_id"])
 
+        if not symbol or not sharesToSell:
+            return apology("provide symbol and amount of shares to sell", 400)
+
+        price = lookup(symbol)["price"]
+        sharesInWallet = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", symbol, session["user_id"])
 
         if sharesToSell > sharesInWallet:
-            return apology("not enough shares in wallet". 400)
+            return apology("not enough shares in wallet", 400)
 
 
     else:
