@@ -103,9 +103,12 @@ def history():
     """Show history of transactions"""
 
     history = db.execute("SELECT symbol, num_shares, price, time FROM transactions WHERE person_id = ?;", session["user_id"])
-    history["price"] = 
+    if not history:
+        return apology("no history records yet", 400)
 
-    return apology("TODO")
+    history["price"] = usd(float(history["price"]))
+
+    return render_template("history.html", history=history)
 
 
 @app.route("/login", methods=["GET", "POST"])

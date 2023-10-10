@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table id="customers">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for el in history %}
+                <tr>
+                    <td class="uppercase">{{ el["symbol"] }}</td>
+                    <td>{{ el["shares"] }}</td>
+                    <td>{{ el["price"] }}</td>
+                    <td>{{ el["total"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+{% endblock %}
