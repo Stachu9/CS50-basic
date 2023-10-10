@@ -9,7 +9,7 @@
         <label for="shares">Select share to sell::</label>
         <select id="shares" name="share">
             {% for share in shares %}
-                <option value="{{share["symbol"]}}"
+                <option value="{{ share["symbol"] }}">{{ share["symbol"] }}</option>
             {% endfor %}
         </select>
         <div class="mb-3">
