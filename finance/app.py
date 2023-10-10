@@ -234,9 +234,9 @@ def sell():
 
         # Remove 0 shares symbols
         for share in sharesClone:
-            if el["shares"] == 0:
-                shares.remove(el)
-                
+            if share["shares"] == 0:
+                shares.remove(share)
+
         for share in shares:
             share["number"] = db.execute("SELECT SUM(num_shares) FROM transactions WHERE person_id = ? AND symbol = ?;", session["user_id"], share["symbol"])
 
