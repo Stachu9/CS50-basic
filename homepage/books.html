@@ -64,7 +64,7 @@
             }
             let elements = document.getElementsByTagName("li");
             console.log(elements);
-            elements.forEach((item)=>item.addEventListener("click", ()=>specialFunc(event)))
+            Object.values(elements).forEach((item)=>item.addEventListener("click", ()=>specialFunc(event)))
             //for (item of elements) {
               //  item.addEventListener("click", ()=>specialFunc(event));
             //}
