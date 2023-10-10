@@ -43,14 +43,15 @@ def index():
     counter = 0
     for el in wholePortfolio:
         sharesTable = db.execute("SELECT SUM(num_shares) FROM transactions WHERE symbol = ? AND person_id = ?;", el["symbol"], session["user_id"])
-        portfolio[counter]["symbol"] = el["symbol"]
-        portfolio[counter]["name"] = el["symbol"]
-        portfolio[counter]["shares"] = int(sharesTable[0]["SUM(num_shares)"])
-        portfolio[counter]["price"] = float(lookup(el["symbol"])["price"])
-        portfolio[counter]["totalToSumarize"] = el["shares"] * el["price"]
-        portfolio[counter]["total"] = usd(el["totalToSumarize"])
-        portfolio[counter]["price"] = usd(el["price"])
-        counter += 1
+        portfolio.append( {
+        ["symbol"] = el["symbol"]
+        ["name"] = el["symbol"]
+        ["shares"] = int(sharesTable[0]["SUM(num_shares)"])
+        ["price"] = float(lookup(el["symbol"])["price"])
+        ["totalToSumarize"] = el["shares"] * el["price"]
+        ["total"] = usd(el["totalToSumarize"])
+        ["price"] = usd(el["price"])
+        })
 
     cash = float((db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"]))[0]["cash"])
 
