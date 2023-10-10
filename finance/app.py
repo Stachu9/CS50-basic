@@ -221,6 +221,8 @@ def sell():
         db.execute("UPDATE users SET cash = ? WHERE id = ?;", (cashInWallet + (price * sharesToSell)), session["user_id"])
         db.execute("INSERT INTO transactions (person_id, symbol, num_shares, price) VALUES (?, ?, ?, ?);", session["user_id"], symbol, -(sharesToSell), price)
 
+        return redirect("/")
+
     else:
         shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
         for share in shares:
