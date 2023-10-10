@@ -206,7 +206,6 @@ def sell():
         ...
     else:
         shares = db.execute("SELECT symbol FROM transactions WHERE person_id = ? GROUP BY symbol;", session["user_id"])
-        wallet {}
         for share in shares:
             share["number"] = db.execute("SELECT SUM(share_num) FROM transactions WHERE person_id = ? AND symbol = ?;", session["user_id"], share["symbol"])
     return render_template("sell.html")
