@@ -209,4 +209,4 @@ def sell():
         for share in shares:
             share["number"] = db.execute("SELECT SUM(num_share) FROM transactions WHERE person_id = ? AND symbol = ?;", session["user_id"], share["symbol"])
 
-    return render_template("sell.html", share=share)
+    return render_template("sell.html", shares=shares)

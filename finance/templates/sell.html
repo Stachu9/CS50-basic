@@ -8,8 +8,8 @@
     <form action="/sell" method="post">
         <label for="shares">Select share to sell::</label>
         <select id="shares" name="share">
-            {% for el in portfolio %}
-                <option value=""
+            {% for share in shares %}
+                <option value="{{share["symbol"]}}"
             {% endfor %}
         </select>
         <div class="mb-3">
