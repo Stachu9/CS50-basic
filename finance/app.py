@@ -62,10 +62,6 @@ def index():
 
     return render_template("index.html", portfolio=portfolio, cash=cash, total=total)
 
-def buyFunc(symbol):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    return
-
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -292,3 +288,45 @@ def password_change():
 
     else:
         return render_template("password_change.html")
+
+
+@app.route("/buy_share", methods=["GET", "POST"])
+@login_required
+def buyShare():
+    """Buy shares of stock"""
+
+    if request.method == "POST":
+
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        stackObject = lookup(symbol)
+
+        try:
+            shares = int(shares)
+        except:
+            return apology("wrong number of shares", 400)
+
+        if shares < 0:
+            return apology("wrong number of shares", 400)
+
+        if not symbol or not stackObject:
+            return apology("Invalid symbol", 400)
+        if not shares:
+            return apology("missing shares", 400)
+
+        price = float(stackObject["price"])
+        shares = shares
+        totalCost = price * shares
+        walletDB = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        wallet = float(walletDB[0]["cash"])
+
+        if wallet < totalCost:
+            return apology("not enough money", 400)
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?;", (wallet - totalCost), session["user_id"])
+        db.execute("INSERT INTO transactions (person_id, symbol, num_shares, price) VALUES (?, ?, ?, ?);", session["user_id"], symbol, shares, price)
+
+        return redirect("/")
+
+    else:
+        return render_template("buy.html")
