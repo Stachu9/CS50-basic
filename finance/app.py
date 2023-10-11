@@ -274,7 +274,7 @@ def password_change():
         # Check if old password is correct
         userOldPasswordDB = db.execute("SELECT hash FROM users WHERE id = ?;", session["user_id"])
 
-        if check_password_hash(userOldPasswordDB[0]["hash"], oldPassword):
+        if not check_password_hash(userOldPasswordDB[0]["hash"], oldPassword):
             return apology("wrong old password", 400)
 
         if not(newPassword == confirmation):
