@@ -295,9 +295,10 @@ def password_change():
 def buyShare():
     """Buy shares of stock"""
 
+    symbol = request.form.get("symbol")
+
     if request.method == "POST":
 
-        symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
 
