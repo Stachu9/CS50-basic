@@ -268,8 +268,11 @@ def password_change():
         newPassword = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
 
+        if not oldPassword or not newPassword or not confirmation:
+            return apology("fill all the blanks", 400)
+
         # Check if there is already username in database
-        usernameInDatabase = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
+        userOldPasswordDB = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
 
         if not username or not usernameInDatabase[0]["COUNT(*)"] == 0:
             return apology("provide another username", 400)
