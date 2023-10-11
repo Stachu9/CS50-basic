@@ -297,6 +297,9 @@ def buyShare():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
+        sharesInWallet = db.execute("SELECT * FROM transactions WHERE symbol = ? AND person_id = ?;", symbol, session["user_id"])
+        if not sharesInWallet:
+            return redirect("/buy")
         return render_template("buy_share.html", symbol=symbol)
     else:
         return redirect("/buy")
