@@ -62,6 +62,10 @@ def index():
 
     return render_template("index.html", portfolio=portfolio, cash=cash, total=total)
 
+def buyFunc(symbol):
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    return
+
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
