@@ -8,6 +8,7 @@
     <table id="customers">
         <thead>
             <tr>
+                <th></th>
                 <th>Symbol</th>
                 <th>Name</th>
                 <th>Shares</th>
@@ -18,6 +19,12 @@
         <tbody>
             {% for el in portfolio %}
                 <tr>
+                    <td>
+                        <form action="/buy_share" method="post">
+                            <input type="hidden" value="{{ el["symbol"] }}" name="symbol">
+                            <button class="btn btn-primary" type="submit">Buy more shares</button>
+                        </form>
+                    </td>
                     <td class="uppercase">{{ el["symbol"] }}</td>
                     <td class="uppercase">{{ el["name"] }}</td>
                     <td>{{ el["shares"] }}</td>
