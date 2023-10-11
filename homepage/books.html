@@ -56,7 +56,7 @@
                 event.target.id = "nowy";
                 console.log(event);
                 const text = document.createTextNode("!!!!!!!!!!!!!!");
-                document.getElementById("nowy").appendChild(text);
+                eventTarget.appendChild(text);
                 document.getElementById("nowy").insertAdjacentText('afterbegin', '!!!!!!!!!!!');
                 document.getElementById("nowy").insertAdjacentHTML('beforebegin', '<div>!!!!!!!!!!!!!!!!!!!</div>');
                 document.getElementById("nowy").insertAdjacentHTML('beforeend', '<div>!!!!!!!!!!!!!!!!!!!</div>');
