@@ -257,3 +257,37 @@ def sell():
             share["number"] = db.execute("SELECT SUM(num_shares) FROM transactions WHERE person_id = ? AND symbol = ?;", session["user_id"], share["symbol"])
 
     return render_template("sell.html", shares=shares)
+
+@app.route("/password_change", methods=["GET", "POST"])
+def password_change():
+    """Change password"""
+
+
+    if request.method == "POST":
+        oldPassword = request.form.get("old_password")
+        newPassword = request.form.get("new_password")
+        confirmation = request.form.get("confirmation")
+
+        # Check if there is already username in database
+        usernameInDatabase = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
+
+        if not username or not usernameInDatabase[0]["COUNT(*)"] == 0:
+            return apology("provide another username", 400)
+
+        if not password or not(password == confirmation):
+            return apology("provide password and confirm", 400)
+
+        # Hash password and inserts data into database
+        hashedPassword = generate_password_hash(password)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, hashedPassword)
+
+        # Query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+
+        return redirect("/")
+
+    else:
+        return render_template("password_change.html")
