@@ -59,6 +59,7 @@ def index():
         total += el["totalToSumarize"]
 
     cash = usd(cash)
+    total = usd(total)
 
     return render_template("index.html", portfolio=portfolio, cash=cash, total=total)
 
