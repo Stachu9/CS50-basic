@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             {% for el in portfolio %}
-                <tr>
+                <tr onclick="/buy" method="post" name="symbol" value="{{ el["symbol"] }}">
                     <td class="uppercase">{{ el["symbol"] }}</td>
                     <td class="uppercase">{{ el["name"] }}</td>
                     <td>{{ el["shares"] }}</td>
