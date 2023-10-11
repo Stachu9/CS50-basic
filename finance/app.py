@@ -271,24 +271,18 @@ def password_change():
         if not oldPassword or not newPassword or not confirmation:
             return apology("fill all the blanks", 400)
 
-        # Check if there is already username in database
-        userOldPasswordDB = db.execute("SELECT COUNT(*) FROM users WHERE username = ?;", username)
+        # Check if old password is correct
+        userOldPasswordDB = db.execute("SELECT hash FROM users WHERE id = ?;", session["user_id"])
 
-        if not username or not usernameInDatabase[0]["COUNT(*)"] == 0:
-            return apology("provide another username", 400)
+        if check_password_hash(userOldPasswordDB[0]["hash"], oldPassword):
+            return apology("wrong old password", 400)
 
-        if not password or not(password == confirmation):
-            return apology("provide password and confirm", 400)
+        if not(newPassword == confirmation):
+            return apology("new password and confirmation do not match", 400)
 
         # Hash password and inserts data into database
-        hashedPassword = generate_password_hash(password)
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, hashedPassword)
-
-        # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-
-        # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        hashedPassword = generate_password_hash(newPassword)
+        db.execute("UPDATE users SET hash = ? WHERE id = ?;", hashedPassword, session["user_id"])
 
         return redirect("/")
 
