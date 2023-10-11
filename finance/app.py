@@ -297,5 +297,6 @@ def buyShare():
 
     if request.method == "POST":
         symbol = request.form.get("symbol")
-            return render_template("buy_share.html", symbol=symbol)
-    else redirect("/buy")
+        return render_template("buy_share.html", symbol=symbol)
+    else:
+        return redirect("/buy")
