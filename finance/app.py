@@ -302,6 +302,9 @@ def buyShare():
         shares = request.form.get("shares")
         stackObject = lookup(symbol)
 
+        if not shares:
+            return render_template("buy_share.html", symbol=symbol)
+
         try:
             shares = int(shares)
         except:
