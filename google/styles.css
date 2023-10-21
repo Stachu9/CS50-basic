@@ -4,14 +4,13 @@
     right: 10px;
 }
 
-.containter {
+.container {
     margin: 50px;
 }
 
 .center {
     margin: 0;
     position: relative;
-    top: 50%;
     left: 50%;
     margin: 10px;
 }
