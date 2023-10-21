@@ -34,3 +34,9 @@ a {
 .label {
     margin-right: 5px;
 }
+
+#blue-button {
+    background-color: blue;
+    color: white;
+
+}
