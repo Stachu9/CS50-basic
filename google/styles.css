@@ -7,4 +7,6 @@
 .center {
     margin: auto;
     width: auto;
+    position: relative;
+    display: block;
 }
