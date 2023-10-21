@@ -23,6 +23,10 @@
     margin: 5px;
 }
 
+label {
+    width: 170px;
+}
+
 a {
     margin: 5px;
 }
