@@ -16,6 +16,13 @@
     margin: 5px;
 }
 
+.left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 5px;
+}
+
 a {
     margin: 5px;
 }
