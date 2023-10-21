@@ -5,7 +5,7 @@
 }
 
 .containter {
-    margin: 20px;
+    margin: 50px;
 }
 
 .center {
@@ -13,5 +13,5 @@
     position: relative;
     top: 50%;
     left: 50%;
-    margin: 20px;
+    margin: 10px;
 }
